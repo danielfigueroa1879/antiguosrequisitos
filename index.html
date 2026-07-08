@@ -1,1 +1,437 @@
-<h1>Hola requistos antiguos</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Requisitos de Seguridad Privada - OS10 Coquimbo</title>
+    
+    <!-- Favicon e iconos desde carpeta foto -->
+    <link rel="icon" type="image/png" sizes="32x32" href="foto/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="foto/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="foto/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="foto/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="foto/icon-180x180.png">
+    <link rel="icon" href="foto/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="foto/os.png">
+    
+    <!-- Enlaza el archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlaza la fuente Poppins de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="btn-volver" onclick="volverAtras()" style="display: none;">← Volver Atrás</button>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <div class="titulo-con-logo">
+                        <div class="logo-titulo">
+                            <img src="foto/logo.png" alt="Logo Carabineros" class="logo-imagen">
+                        </div>
+                        <h1>Sistema de Requisitos de Seguridad Privada</h1>
+                    </div>
+                    <h2>OS10 Coquimbo - Carabineros de Chile</h2>
+                </div>
+            </div>
+            <p>Sistema de verificación y control de cumplimiento normativo</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Página de inicio -->
+            <div id="inicio-section" class="form-section active">
+                <h2 style="text-align: center; color: #2d5016; margin-bottom: 30px; font-size: 2em;">
+                    Seleccione el tipo de requisitos a revisar
+                </h2>
+                
+                <div class="menu-grid">
+                    
+                    <button class="menu-card estudios-seguridad" onclick="mostrarSeccion('estudios-seguridad')">
+                        <h3>📊 Estudios de Seguridad</h3>
+                        <p>Verificación de requisitos para estudios de seguridad de casa matriz y sus sucursales - Decreto 32 Exento del 2024.</p>
+                    </button>
+                    
+                    <button class="menu-card plan-seguridad" onclick="mostrarSeccion('plan-seguridad')">
+                        <h3>📋 Plan de Seguridad</h3>
+                        <p>Verificación de requisitos para planes de seguridad con vigencia de 2 años - Decreto 32 Exento del 2024.</p>
+                    </button>
+                                        
+                    <button class="menu-card servicentros" onclick="mostrarSeccion('servicentros')">
+                        <h3>⛽ Medidas Servicentros</h3>
+                        <p>Requisitos de seguridad para establecimientos de venta de combustible al público (3 años de vigencia)</p>
+                    </button>
+                    
+                    <button class="menu-card sobre-500uf" onclick="mostrarSeccion('sobre-500uf')">
+                        <h3>💰 Medidas Sobre 500 UF</h3>
+                        <p>Supermercados, joyerías y establecimientos que manejan valores superiores a 500 UF (3 años)</p>
+                    </button>
+                    
+                    <button class="menu-card directiva-funcionamiento" onclick="mostrarSeccion('directiva-funcionamiento')">
+                        <h3>📄 Directiva de Funcionamiento</h3>
+                        <p>Requisitos para directivas de instalaciones, eventos deportivos y otros eventos masivos</p>
+                        <p>Decreto N° 32 Exento del 31.01.2024</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección Plan de Seguridad -->
+            <div id="plan-seguridad-section" class="form-section plan-seguridad">
+                <div class="form-header plan-seguridad">
+                    <h2>📋 PLAN DE SEGURIDAD</h2>
+                    <p>Decreto Ley 3.607</p>
+                    <p>Vigencia según estudio (2 años)</p>
+            
+                </div>
+
+                <div class="establecimiento-info">
+                    <h3>🏢 Datos de la Empresa o Entidad y Datos del Establecimiento</h3>
+                    <div class="establecimiento-grid">
+                        <div class="form-group">
+                            <label for="nombre-empresa-plan">NOMBRE DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="nombre-empresa-plan" placeholder="Ingrese el nombre de la empresa o entidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="rut-empresa-plan">RUT DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="rut-empresa-plan" placeholder="Ej: 12.345.678-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-establecimiento-plan">NOMBRE DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="nombre-establecimiento-plan" placeholder="Ingrese el nombre del establecimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion-plan">DIRECCIÓN DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="direccion-plan" placeholder="Dirección completa del establecimiento">
+                        </div>
+                        <div class="form-group">
+                             <label for="quien-presenta-plan">QUIEN PRESENTA LA DOCUMENTACIÓN:</label>
+                             <input type="text" id="quien-presenta-plan" placeholder="Nombre, rut y telefono">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcionario-info">
+                    <h3>👮 DATOS DEL FUNCIONARIO</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="funcionario-grado-plan">GRADO Y NOMBRE DEL FUNCIONARIO:</label>
+                            <input type="text" id="funcionario-grado-plan" placeholder="Ej: Sgto. 1ro. Daniel Figueroa Chacama">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print-info">
+                    <p><strong>Nota:</strong> Para imprimir, use el botón "Imprimir" o Ctrl+P. El formato se ajustará automáticamente.</p>
+                </div>
+
+                <div class="header-requisitos-desktop">
+                    <div>N°</div>
+                    <div>Requisito</div>
+                    <div>Estado</div>
+                    <div>Observaciones</div>
+                </div>
+
+                <div id="requisitos-plan-seguridad">
+                    <!-- Los requisitos se cargarán aquí dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                    <button class="btn btn-info" onclick="window.print()">🖨️ Imprimir</button>
+                    <button class="btn btn-success" onclick="generarReporte('plan-seguridad')">📄 Generar PDF</button>
+                </div>
+            </div>
+
+            <!-- Sección Estudios de Seguridad -->
+            <div id="estudios-seguridad-section" class="form-section estudios-seguridad">
+                <div class="form-header estudios-seguridad">
+                    <h2>📊 ESTUDIOS DE SEGURIDAD</h2>
+                    <p>Casa Matriz y Sucursales</p>
+                    <p>Decreto Ley 3.607</p>
+                    <p>Vigencia según estudio (2 años)</p>
+                    
+                </div>
+
+                <div class="establecimiento-info">
+                    <h3>🏢 Datos de la Empresa o Entidad y Datos del Establecimiento</h3>
+                    <div class="establecimiento-grid">
+                        <div class="form-group">
+                            <label for="nombre-empresa-estudios">NOMBRE DE LA EMPRESA O ENTIDAD (CASA MATRIZ):</label>
+                            <input type="text" id="nombre-empresa-estudios" placeholder="Ingrese el nombre de la casa matriz">
+                        </div>
+                        <div class="form-group">
+                            <label for="rut-empresa-estudios">RUT DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="rut-empresa-estudios" placeholder="Ej: 12.345.678-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-establecimiento-estudios">NOMBRE DE LA CASA MATRIZ:</label>
+                            <input type="text" id="nombre-establecimiento-estudios" placeholder="Ingrese el nombre del estudio de seguridad">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion-estudios">DIRECCIÓN DE LA CASA MATRIZ:</label>
+                            <input type="text" id="direccion-estudios" placeholder="Dirección completa de la casa matriz">
+                        </div>
+                        <div class="form-group">
+                            <label for="quien-presenta-estudios">QUIEN PRESENTA LA DOCUMENTACIÓN:</label>
+                            <input type="text" id="quien-presenta-estudios" placeholder="Nombre, rut y telefono">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcionario-info">
+                    <h3>👮 DATOS DEL FUNCIONARIO</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="funcionario-grado-estudios">GRADO Y NOMBRE DEL FUNCIONARIO:</label>
+                            <input type="text" id="funcionario-grado-estudios" placeholder="Ej: Sgto. 1ro. Daniel Figueroa Chacama">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print-info">
+                    <p><strong>Nota:</strong> Para imprimir, use el botón "Imprimir" o Ctrl+P. El formato se ajustará automáticamente.</p>
+                </div>
+
+                <div class="header-requisitos-desktop">
+                    <div>N°</div>
+                    <div>Requisito</div>
+                    <div>Estado</div>
+                    <div>Observaciones</div>
+                </div>
+
+                <div id="requisitos-estudios-seguridad">
+                    <!-- Los requisitos se cargarán aquí dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                    <button class="btn btn-info" onclick="window.print()">🖨️ Imprimir</button>
+                    <button class="btn btn-success" onclick="generarReporte('estudios-seguridad')">📄 Generar PDF</button>
+                </div>
+            </div>
+
+            <!-- Sección Medidas Servicentros -->
+            <div id="servicentros-section" class="form-section servicentros">
+                <div class="form-header servicentros">
+                    <h2>⛽ MEDIDAS SERVICENTROS</h2>
+                    <p>Vigencia 3 años - Ley 19.303</p>
+                    <p>Decreto N° 32 Exento del 31.01.2024</p>
+                </div>
+
+                <div class="establecimiento-info">
+                    <h3>🏢 Datos de la Empresa o Entidad y Datos del Establecimiento</h3>
+                    <div class="establecimiento-grid">
+                        <div class="form-group">
+                            <label for="nombre-empresa-servicentros">NOMBRE DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="nombre-empresa-servicentros" placeholder="Ingrese el NOMBRE DE LA EMPRESA O ENTIDAD">
+                        </div>
+                        <div class="form-group">
+                            <label for="rut-empresa-servicentros">RUT DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="rut-empresa-servicentros" placeholder="Ej: 12.345.678-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-establecimiento-servicentros">NOMBRE DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="nombre-establecimiento-servicentros" placeholder="Ingrese el nombre del establecimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion-servicentros">DIRECCIÓN DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="direccion-servicentros" placeholder="Dirección completa del establecimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="quien-presenta-servicentros">QUIEN PRESENTA LA DOCUMENTACIÓN:</label>
+                            <input type="text" id="quien-presenta-servicentros" placeholder="Nombre, rut y telefono">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcionario-info">
+                    <h3>👮 DATOS DEL FUNCIONARIO</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="funcionario-grado-servicentros">Grado y Nombre del Funcionario:</label>
+                            <input type="text" id="funcionario-grado-servicentros" placeholder="Ej: Mayor Juan Pérez González">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print-info">
+                    <p><strong>Nota:</strong> Para imprimir, use el botón "Imprimir" o Ctrl+P. El formato se ajustará automáticamente.</p>
+                </div>
+
+                <div class="header-requisitos-desktop">
+                    <div>N°</div>
+                    <div>Requisito</div>
+                    <div>Estado</div>
+                    <div>Observaciones</div>
+                </div>
+
+                <div id="requisitos-servicentros">
+                    <!-- Los requisitos se cargarán aquí dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                    <button class="btn btn-info" onclick="window.print()">🖨️ Imprimir</button>
+                    <button class="btn btn-success" onclick="generarReporte('servicentros')">📄 Generar PDF</button>
+                </div>
+            </div>
+
+            <!-- Sección Medidas Sobre 500 UF -->
+            <div id="sobre-500uf-section" class="form-section sobre-500uf">
+                <div class="form-header sobre-500uf">
+                    <h2>💰 MEDIDAS SOBRE 500 UF</h2>
+                    <p>Vigencia 3 años - Supermercados, joyerías y establecimientos que manejan valores superiores a 500 UF</p>
+                    <p>Decreto N° 32 Exento del 31.01.2024</p>
+                </div>
+
+                <div class="establecimiento-info">
+                    <h3>🏢 Datos de la Empresa o Entidad y Datos del Establecimiento</h3>
+                    <div class="establecimiento-grid">
+                        <div class="form-group">
+                            <label for="nombre-empresa-500uf">NOMBRE DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="nombre-empresa-500uf" placeholder="Ingrese el nombre de la empresa o entidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="rut-empresa-500uf">RUT DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="rut-empresa-500uf" placeholder="Ej: 12.345.678-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-establecimiento-500uf">NOMBRE DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="nombre-establecimiento-500uf" placeholder="Ingrese el nombre del establecimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion-500uf">DIRECCIÓN DEL ESTABLECIMIENTO:</label>
+                            <input type="text" id="direccion-500uf" placeholder="Dirección completa del establecimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="quien-presenta-500uf">QUIEN PRESENTA LA DOCUMENTACIÓN:</label>
+                            <input type="text" id="quien-presenta-500uf" placeholder="Nombre, rut y telefono">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcionario-info">
+                    <h3>👮 DATOS DEL FUNCIONARIO</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="funcionario-grado-500uf">Grado y Nombre del Funcionario:</label>
+                            <input type="text" id="funcionario-grado-500uf" placeholder="Ej: Mayor Juan Pérez González">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print-info">
+                    <p><strong>Nota:</strong> Para imprimir, use el botón "Imprimir" o Ctrl+P. El formato se ajustará automáticamente.</p>
+                </div>
+
+                <div class="header-requisitos-desktop">
+                    <div>N°</div>
+                    <div>Requisito</div>
+                    <div>Estado</div>
+                    <div>Observaciones</div>
+                </div>
+
+                <div id="requisitos-sobre-500uf">
+                    <!-- Los requisitos se cargarán aquí dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                    <button class="btn btn-info" onclick="window.print()">🖨️ Imprimir</button>
+                    <button class="btn btn-success" onclick="generarReporte('sobre-500uf')">📄 Generar PDF</button>
+                </div>
+            </div>
+
+            <!-- Sección Directiva de Funcionamiento -->
+            <div id="directiva-funcionamiento-section" class="form-section directiva-funcionamiento">
+                <div class="form-header directiva-funcionamiento">
+                    <h2>📄 DIRECTIVA DE FUNCIONAMIENTO</h2>
+                    <p>Requisitos para directivas de instalaciones, eventos deportivos y otros eventos masivos</p>
+                </div>
+
+                <div class="directiva-selector">
+                    <h3>Seleccione el tipo de Directiva</h3>
+                    <div class="directiva-options">
+                        <div class="directiva-option" data-type="instalacion" onclick="seleccionarDirectiva('instalacion')">
+                            <h4>Instalación</h4>
+                            <p>Directivas para instalaciones de seguridad privada.</p>
+                        </div>
+                        <div class="directiva-option" data-type="evento-deportivo" onclick="seleccionarDirectiva('evento-deportivo')">
+                            <h4>Evento Deportivo</h4>
+                            <p>Directivas para eventos deportivos masivos.</p>
+                        </div>
+                        <div class="directiva-option" data-type="evento-masivo" onclick="seleccionarDirectiva('evento-masivo')">
+                            <h4>Evento Masivo</h4>
+                            <p>Directivas para otros eventos masivos (conciertos, ferias, etc.).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="establecimiento-info">
+                    <h3>🏢 Datos de la Empresa o Entidad y Datos del Establecimiento</h3>
+                    <div class="establecimiento-grid">
+                        <div class="form-group">
+                            <label for="nombre-empresa-directiva">NOMBRE DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="nombre-empresa-directiva" placeholder="Ingrese el nombre de la empresa o entidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="rut-empresa-directiva">RUT DE LA EMPRESA O ENTIDAD:</label>
+                            <input type="text" id="rut-empresa-directiva" placeholder="Ej: 12.345.678-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-establecimiento-directiva">NOMBRE DEL ESTABLECIMIENTO/EVENTO:</label>
+                            <input type="text" id="nombre-establecimiento-directiva" placeholder="Ingrese el nombre del establecimiento o evento">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion-directiva">DIRECCIÓN/LUGAR:</label>
+                            <input type="text" id="direccion-directiva" placeholder="Dirección completa o lugar del evento">
+                        </div>
+                        <div class="form-group">
+                            <label for="quien-presenta-directiva">QUIEN PRESENTA LA DOCUMENTACIÓN:</label>
+                            <input type="text" id="quien-presenta-directiva" placeholder="Nombre, rut y telefono">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcionario-info">
+                    <h3>👮 DATOS DEL FUNCIONARIO</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="funcionario-grado-directiva">Grado y Nombre del Funcionario:</label>
+                            <input type="text" id="funcionario-grado-directiva" placeholder="Ej: Mayor Juan Pérez González">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print-info">
+                    <p><strong>Nota:</strong> Para imprimir, use el botón "Imprimir" o Ctrl+P. El formato se ajustará automáticamente.</p>
+                </div>
+
+                <div class="header-requisitos-desktop">
+                    <div>N°</div>
+                    <div>Requisito</div>
+                    <div>Estado</div>
+                    <div>Observaciones</div>
+                </div>
+
+                <div id="requisitos-directiva-funcionamiento">
+                    <!-- Los requisitos se cargarán aquí dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                    <button class="btn btn-info" onclick="window.print()">🖨️ Imprimir</button>
+                    <button class="btn btn-success" onclick="generarReporte('directiva-funcionamiento')">📄 Generar PDF</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Enlaza el archivo JavaScript externo -->
+    <script src="script.js"></script>
+    <!-- Incluye jsPDF para la generación de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>
