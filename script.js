@@ -403,10 +403,10 @@ async function generarReporte(sectionId) {
     
     if (sectionId === 'plan-seguridad') {
         sectionTitle = 'PLAN DE SEGURIDAD';
-        sectionSubtitle = 'Vigencia según estudio (2 años)';
+        sectionSubtitle = 'Vigencia según estudio';
     } else if (sectionId === 'estudios-seguridad') {
         sectionTitle = 'ESTUDIOS DE SEGURIDAD';
-        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia según estudio (2 años)';
+        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia según estudio';
     } else if (sectionId === 'servicentros') {
         sectionTitle = 'MEDIDAS DE SEG. SERVICENTROS';
         sectionSubtitle = 'Vigencia 3 años - Ley 19.303';
