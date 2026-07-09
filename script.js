@@ -9,44 +9,53 @@
 // Datos de los requisitos para cada sección
 const requisitosData = {
     'plan-seguridad': [
-        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA presentada conforme al artículo 15 del Decreto N° 209 de 2024.' },
-        { id: 2, text: 'PLAN DE SEGURIDAD POR CADA SUCURSAL O INSTALACIÓN: El plan se entiende como parte integrante del Estudio de Seguridad y debe materializar las directrices de seguridad contenidas en el estudio corporativo, identificando áreas sensibles de la instalación específica (Art. 15 inciso 2° Decreto N° 209).' },
-        { id: 3, text: 'JEFE DE SEGURIDAD CORPORATIVO: Debe estar autorizado mediante Resolución de la Subsecretaría de Prevención del Delito. Requiere título profesional (mínimo 8 semestres) + curso de especialidad en seguridad o materias afines (Art. 22 y 23 Decreto N° 209).' },
-        { id: 4, text: 'ENCARGADO DE SEGURIDAD DE LA SUCURSAL: Debe estar autorizado mediante Resolución de la Subsecretaría de Prevención del Delito. Requiere cumplir mismos requisitos de vigilante privado + curso de 120 horas en seguridad o materias afines (Art. 25 Decreto N° 209).' },
-        { id: 5, text: 'CAJEROS AUTOMÁTICOS: Indicar cantidad de cajeros que se mantienen en la instalación y números ATM.' },
-        { id: 6, text: 'EMPRESA DE SEGURIDAD PRIVADA (si subcontrata personal): Adjuntar Resolución de Autorización de la empresa emitida por la Subsecretaría de Prevención del Delito, con listado actualizado del personal contratado (Art. 21 inciso 4° y Art. 49-51 Decreto N° 209).' },
-        { id: 7, text: 'INFORMACIÓN PARA DECISIONES POLICIALES: Incluida en el plan conforme artículo 15 del Decreto N° 209.' },
-        { id: 8, text: 'FOTOGRAFÍAS Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS: Autorizados por la Subsecretaría de Prevención del Delito mediante resolución (Art. 26 y siguientes Decreto N° 209).' },
-        { id: 9, text: 'GUARDIAS DE SEGURIDAD DE APOYO (solo si aplica): Listado con credenciales autorizadas por Subsecretaría. IMPORTANTE: Los guardias de seguridad NO portan armas y solo apoyan funciones de vigilantes privados (Art. 21 inciso final y Art. 86-91 Decreto N° 209).' },
-        { id: 10, text: 'CONTRATOS DE COMODATO DE ARMAMENTO Y MUNICIONES: Conforme artículos 99 y siguientes del Decreto Supremo N° 83 de 2007 (Reglamento Control de Armas). Certificado de inscripción otorgado por DGMN (Art. 15 N°5 Decreto N° 209). El armamento es siempre de propiedad de la entidad obligada.' },
-        { id: 11, text: 'CERTIFICADOS IDIC DE CHALECOS ANTIBALAS: Resistencia balística NIJ 0101.04, nivel de amenaza no superior a 40 mm (Art. 31 Decreto N° 209). ELEMENTOS MÍNIMOS OBLIGATORIOS POR CADA VIGILANTE: Chaleco antibalas + Bastón retráctil + Esposas.' },
-        { id: 12, text: 'SEGURO DE VIDA POR DEFICIENCIA DE CHALECOS: 30 UF o equivalente en dólares si los chalecos antibalas no cumplen su función protectora (normativa vigente).' },
-        { id: 13, text: 'SEGURO DE VIDA DE VIGILANTES PRIVADOS: Mínimo 250 UF por vigilante. La póliza debe considerar expresamente el término "Vida" o "Seguro de Vida" (Art. 29 Ley 21.659).' },
-        { id: 14, text: 'SISTEMA CCTV Y OPERADORES: Si el monitoreo es realizado por empresa externa, adjuntar Resolución de Autorización de la empresa emitida por Subsecretaría de Prevención del Delito y credenciales vigentes de los operadores CCTV autorizados (Art. 15 Decreto N° 209).' },
-        { id: 15, text: 'PLAN DE EMERGENCIA Y EVACUACIÓN: Incluye croquis de ubicación, elementos de emergencia y vías de evacuación de la instalación/sucursal específica.' },
-        { id: 16, text: 'ESTRUCTURA DEL ORGANISMO INTERNO DE SEGURIDAD: Debe incluir: Jefe de Seguridad (corporativo), Encargado de Seguridad (por sucursal), Encargado de Armas, Vigilantes Privados, Guardias de Seguridad de apoyo (si corresponde) - Art. 21 Decreto N° 209.' },
-        { id: 17, text: 'PROTOCOLOS DE ACTUACIÓN Y PROCEDIMIENTOS: Específicos de la sucursal para neutralizar vulnerabilidades y debilidades identificadas, con acciones de contingencia ante emergencias o comisión de ilícitos.' },
-        { id: 18, text: 'IDENTIFICACIÓN DE ÁREAS VULNERABLES: De la instalación/sucursal específica, con medidas técnicas y materiales propuestas para neutralizar situaciones delictuales (Art. 15 N°3 segundo párrafo Decreto N° 209).' }
+        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA.' },
+        { id: 2, text: 'EL PLAN DE SEGURIDAD, CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
+        { id: 3, text: 'ENCARGADO DE SEGURIDAD: EL ENCARGADO DE SEGURIDAD DEBE ESTAR ACREDITADO (AUTORIZACIÓN RESOLUCIÓN) ASÍ COMO TAMBIÉN EL SUPLENTE. (APARTADO IV: CONFECCIÓN DE INSTRUMENTOS DE SEGURIDAD; N° 2 PLAN DE SEGURIDAD ; ENCARGADO DE SEGURIDAD)' },
+        { id: 4, text: 'CAJERO AUTOMÁTICO: CUANTO CAJEROS SE MANTIENEN EN EL BANCO Y NÚMEROS ATM.' },
+        { id: 5, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS)' },
+        { id: 6, text: 'INFORMACIÓN PARA DECISIONES POLICIALES' },
+        { id: 7, text: 'FOTOGRAFÍA Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS.' },
+        { id: 8, text: 'Copia de la Autorización del Encargado de Seguridad Suplente (conforme a al Manual Operativo en Materias de Seguridad Privada, aprobado mediante Decreto Exento N° 32 del 31.01.2024, del Ministerio del Interior y Seguridad Publica).' },
+        { id: 9, text: 'COMODATOS Y PADRONES O CERTIFICADO DE INSCRIPCIÓN DE TODOS LOS ARMAMENTOS Y CANTIDADES copia del reporte o despliegue del armamento de la empresa, otorgado por la Dirección General de Movilización Nacional (D.G.M.N.).' },
+        { id: 10, text: 'Copia de los CERTIFICADOS DEL LABORATORIO DE RESISTENCIA BALÍSTICA de los chalecos antibalas, otorgado por el Instituto de Investigaciones y Control del Ejército de Chile (IDIC), respecto de cumplir con la normativa técnica de ensayo balístico NIJ 0101.04., cuyo nivel de amenaza no sea superior a 40 mm.' },
+        { id: 11, text: 'Copia del SEGURO DE VIDA POR 30 UF o su equivalente en dólares americanos, esto para el caso que los CHALECOS ANTIBALAS no cumpla con la función, conforme a lo estipulado en el artículo noveno, numeral 1) del Decreto Supremo N° 867, del 13.06.2017 del Ministerio del Interior y Seguridad Pública, en concordancia con el Manual Operativo en materias de Seguridad Privada, aprobado a través del Decreto Exento N° 32 de fecha 31.01.2024, del mismo Ministerio.' },
+        { id: 12, text: 'SEGURO DE VIDA DE LOS VIGILANTES PRIVADOS, la que debe considerar el término de "Vida" o "Seguro de Vida.' },
+        { id: 13, text: 'OPERADORES CCTV QUE EMPRESA MONITOREA DESDE SANTIAGO ACREDITACIÓN DE LA EMPRESA Y OPERADORES.' },
+        { id: 14, text: 'PLAN DE EMERGENCIA Y CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
+        { id: 15, text: 'Adjunta los Anexos "A,B,C,D,E y F", conforme a lo establecido en el formato del Plan de Seguridad.' }
     ],
     'estudios-seguridad': [
-        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA: Presentada ante la Subsecretaría de Prevención del Delito conforme artículo 15 del Decreto N° 209 de 2024. Plazo: 60 días desde notificación de resolución que la determina como entidad obligada.' },
-        { id: 2, text: 'INFORMACIÓN GENERAL DE LA ENTIDAD: Razón social, nombre de fantasía, RUT, giro, domicilio legal, correo electrónico y teléfono de contacto (Art. 15 N°1 Decreto N° 209).' },
-        { id: 3, text: 'REPRESENTANTE LEGAL: Nombre completo, cédula de identidad, domicilio, instrumento que acredita personería, correo electrónico y teléfono de contacto (Art. 15 N°2 Decreto N° 209).' },
-        { id: 4, text: 'INSTALACIONES O SUCURSALES: Indicación de domicilios respectivos de TODAS las instalaciones/sucursales de la entidad obligada (Art. 15 N°3 Decreto N° 209).' },
-        { id: 5, text: 'JEFE DE SEGURIDAD CORPORATIVO/NACIONAL: Debe estar autorizado por Subsecretaría de Prevención del Delito mediante Resolución. Requisitos: Título profesional 8 semestres + curso de especialidad en seguridad o materias afines (Art. 22 y 23 Decreto N° 209). Debe visar y ejecutar el estudio.' },
-        { id: 6, text: 'ENCARGADOS DE SEGURIDAD POR CADA SUCURSAL Y SUPLENTES: Autorizados por Subsecretaría mediante Resolución. Requisitos: Iguales a vigilante privado + curso de 120 horas en seguridad o materias afines (Art. 25 Decreto N° 209). Velan por cumplimiento del estudio en cada recinto.' },
-        { id: 7, text: 'IDENTIFICACIÓN DE RIESGOS Y VULNERABILIDADES: Por cada instalación o sucursal, con análisis detallado (Art. 15 N°4 Decreto N° 209).' },
-        { id: 8, text: 'PERSONAL DE SEGURIDAD PRIVADA CONTRATADO: Indicar si es contratado directamente por la entidad o subcontratado a empresa de seguridad privada, con individualizaciones completas (Art. 15 N°5 Decreto N° 209).' },
-        { id: 9, text: 'MEDIDAS DE SEGURIDAD YA IMPLEMENTADAS: Indicando su ubicación específica por instalación o sucursal (Art. 15 N°6 Decreto N° 209).' },
-        { id: 10, text: 'PROPUESTA DE MEDIDAS DE SEGURIDAD CONCRETAS: Señalando cómo estas permiten neutralizar las vulnerabilidades identificadas. Si incluye incorporación de personal de seguridad privada, precisar forma de contratación (Art. 15 N°7 Decreto N° 209).' },
-        { id: 11, text: 'DOCUMENTOS Y ANTECEDENTES FUNDANTES: Que sirven de fundamento para acreditar las vulnerabilidades identificadas y la pertinencia de las medidas de seguridad propuestas (Art. 15 N°8 Decreto N° 209).' },
-        { id: 12, text: 'INFORMACIÓN GENERAL Y PARTICULAR: De la entidad obligada y sus instalaciones (Art. 15 segundo párrafo N°1 Decreto N° 209).' },
-        { id: 13, text: 'ESTRUCTURA DEL ORGANISMO DE SEGURIDAD INTERNO: Detalle completo incluyendo: Jefe de Seguridad, Encargados de Seguridad por sucursal, Encargados de Armas, Vigilantes Privados, Guardias de Seguridad de apoyo. ACCIONES DE CONTINGENCIA ante emergencias o eventual comisión de ilícitos (Art. 15 segundo párrafo N°2 Decreto N° 209). IMPORTANTE: Cualquier cambio debe informarse a Subsecretaría y autoridad fiscalizadora en 15 días.' },
-        { id: 14, text: 'ÁREAS VULNERABLES Y CONDICIONES DE RIESGO: Identificación detallada con proposición de medidas técnicas y materiales tendientes a neutralizar y evitar situaciones delictuales (Art. 15 segundo párrafo N°3 Decreto N° 209).' },
-        { id: 15, text: 'NÚMERO DE VIGILANTES PRIVADOS: Con los que contará la entidad obligada y las modalidades a las que se sujetará la organización y funcionamiento del servicio (Art. 15 segundo párrafo N°4 Decreto N° 209).' },
-        { id: 16, text: 'ARMAMENTO Y MUNICIONES: Cantidad y tipo, acompañando contratos de comodato conforme artículos 99 y siguientes del DS N° 83 de 2007 sobre Control de Armas. Certificados de inscripción DGMN (Art. 15 segundo párrafo N°5 Decreto N° 209).' },
-        { id: 17, text: 'MEDIDAS DE SEGURIDAD CONCRETAS PARA CUMPLIMIENTO: De la Ley 21.659 y Decreto 209, con especificación detallada (Art. 15 segundo párrafo N°6 Decreto N° 209).' },
-        { id: 18, text: 'PLANES DE SEGURIDAD DE CADA SUCURSAL: Cada sucursal o instalación debe tener su plan de seguridad individual que materializa las directrices del estudio corporativo y forma parte integrante del mismo (Art. 15 inciso 2° Decreto N° 209). Los planes deben estar suscritos por Gerente General/Representante Legal junto con Jefe de Seguridad corporativo.' }
+        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA.' },
+        { id: 2, text: 'EL ESTUDIO DE SEGURIDAD, CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
+        { id: 3, text: 'ENCARGADO DE SEGURIDAD: EL ENCARGADO DE SEGURIDAD DEBE ESTAR ACREDITADO (AUTORIZACIÓN RESOLUCIÓN) ASÍ COMO TAMBIÉN EL SUPLENTE. (APARTADO IV: CONFECCIÓN DE INSTRUMENTOS DE SEGURIDAD; N° 2 PLAN DE SEGURIDAD ; ENCARGADO DE SEGURIDAD)' },
+        { id: 4, text: 'CAJERO AUTOMÁTICO: CUANTO CAJEROS SE MANTIENEN EN EL BANCO Y NÚMEROS ATM.' },
+        { id: 5, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS)' },
+        { id: 6, text: 'INFORMACIÓN PARA DECISIONES POLICIALES' },
+        { id: 7, text: 'FOTOGRAFÍA Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS.' },
+        { id: 8, text: 'Copia de la Autorización del Encargado de Seguridad Suplente (conforme a al Manual Operativo en Materias de Seguridad Privada, del Ministerio del Interior y Seguridad Publica).' },
+        { id: 9, text: 'COMODATOS Y PADRONES O CERTIFICADO DE INSCRIPCIÓN DE TODOS LOS ARMAMENTOS Y CANTIDADES copia del reporte o despliegue del armamento de la empresa, otorgado por la Dirección General de Movilización Nacional (D.G.M.N.).' },
+        { id: 10, text: 'Copia de los CERTIFICADOS DEL LABORATORIO DE RESISTENCIA BALÍSTICA de los chalecos antibalas, otorgado por el Instituto de Investigaciones y Control del Ejército de Chile (IDIC), respecto de cumplir con la normativa técnica de ensayo balístico NIJ 0101.04., cuyo nivel de amenaza no sea superior a 40 mm.' },
+        { id: 11, text: 'Copia del SEGURO DE VIDA POR 30 UF o su equivalente en dólares americanos, esto para el caso que los CHALECOS ANTIBALAS no cumpla con la función, conforme a lo estipulado en el artículo noveno, numeral 1) del Decreto Supremo N° 867, del 13.06.2017 del Ministerio del Interior y Seguridad Pública, en concordancia con el Manual Operativo en materias de Seguridad Privada.' },
+        { id: 12, text: 'SEGURO DE VIDA DE LOS VIGILANTES PRIVADOS, la que debe considerar el término de "Vida" o "Seguro de Vida.' },
+        { id: 13, text: 'OPERADORES CCTV QUE EMPRESA MONITOREA DESDE SANTIAGO ACREDITACIÓN DE LA EMPRESA Y OPERADORES.' },
+        { id: 14, text: 'PLAN DE EMERGENCIA Y CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
+        { id: 15, text: 'PRESENTA TODOS LOS PLANES DE CADA SUCURSAL (Cada sucursal debe tener su plan de seguridad individual que forme parte del estudio general de la casa matriz).' }
+    ],
+    'servicentros': [
+        { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
+        { id: 2, text: 'MEDIDAS DE SEGURIDAD CUMPLEN CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN. (página 108 Y 109 establecimiento de venta y combustible al público)' },
+        { id: 3, text: 'CAJERO AUTOMÁTICO: CUAL ES EL NÚMERO ATM Y A QUE BANCO PERTENECE EL CAJERO AUTOMÁTICO. (FOTOGRAFÍAS- INCLUIR UBICACIÓN EN CROQUIS.)' },
+        { id: 4, text: 'QUE EMPRESA DE TRANSPORTE DE TRANSPORTE DE VALORES ES LA ENCARGADA DE REALIZAR LA CARGA Y DESCARGA DEL CAJERO. (aislarse transitoriamente por parte de las entidades emisoras o receptoras o cualquier establecimiento que las contenga)' },
+        { id: 5, text: 'MANTIENE ESTANCO PARA LA CARGA Y DESCARGA DEL CAJERO; SI NO TIENE ESTANCO DEBE APOYAR LA OPERACIÓN CON UNA CÁMARA DE SEGURIDAD.(Art. 8º inciso 1 del Decreto Nº 1.814 del 12.11.2014) (Agregar fotografías y croquis)' },
+        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017- El Decreto Exento N° 32 del 31.01.2024)' },
+        { id: 7, text: 'MÁXIMO DE DINERO QUE MANTIENE LOS ATENDEDORES O BOMBEROS.' },
+        { id: 8, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO.' },
+        { id: 9, text: 'CROQUIS DE CÁMARAS DE SEGURIDAD Y TECNOLOGÍA APLICADA (SENSORES DE HUMO, SENSORES DE MOVIMIENTO, ALARMAS, ETC.)' },
+        { id: 10, text: 'ANÁLISIS DE VULNERABILIDADES Y MITIGACIÓN DE ELLAS.' },
+        { id: 11, text: 'PLAN DE EMERGENCIA Y SUS ANEXOS.' },
+        { id: 12, text: 'CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
+        { id: 13, text: 'TODAS LAS FOTOGRAFÍAS DEBEN VENIR CON UNA DESCRIPCIÓN DE ELLAS.' }
     ],
     'sobre-500uf': [
         { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
@@ -54,7 +63,7 @@ const requisitosData = {
         { id: 3, text: 'CAJERO AUTOMÁTICO: CUAL ES EL NÚMERO ATM Y A QUE BANCO PERTENECE EL CAJERO AUTOMÁTICO. (FOTOGRAFÍAS- INCLUIR UBICACIÓN EN CROQUIS.)' },
         { id: 4, text: 'QUE EMPRESA DE TRANSPORTE DE TRANSPORTE DE VALORES ES LA ENCARGADA DE REALIZAR LA CARGA Y DESCARGA DEL CAJERO. (aislarse transitoriamente por parte de las entidades emisoras o receptoras o cualquier establecimiento que las contenga)' },
         { id: 5, text: 'MANTIENE ESTANCO PARA LA CARGA Y DESCARGA DEL CAJERO; SI NO TIENE ESTANCO DEBE APOYAR LA OPERACIÓN CON UNA CÁMARA DE SEGURIDAD.(Art. 8º inciso 1 del Decreto Nº 1.814 del 12.11.2014) (Agregar fotografías y croquis)' },
-        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017- El Decreto Exento N° 32 del 31.01.2024)' },
+        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017' },
         { id: 7, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS )' },
         { id: 8, text: 'CROQUIS DE CÁMARAS DE SEGURIDAD Y TECNOLOGÍA APLICADA (SENSORES DE HUMO, SENSORES DE MOVIMIENTO, ALARMAS, ETC.)' },
         { id: 9, text: 'ANÁLISIS DE VULNERABILIDADES Y MITIGACIÓN DE ELLAS.' },
@@ -62,56 +71,56 @@ const requisitosData = {
         { id: 11, text: 'CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' }
     ],
     'directiva-funcionamiento': {
-    'instalacion': [
-        { id: 1, text: 'SOLICITUD SIMPLE ante Subsecretaría de Prevención del Delito (De la entidad empleadora o empresa RR.HH.)' },
-        { id: 2, text: 'PRESENTACIÓN CON 15 DÍAS DE ANTICIPACIÓN al inicio del servicio (Art. 92 inciso 6° D.209)' },
-        { id: 3, text: 'LISTADO DE LOS GG.SS. con individualización completa (Art. 92 N°2 D.209)' },
-        { id: 4, text: 'CREDENCIAL VIGENTE O RESOLUCIÓN DE AUTORIZACIÓN de cada guardia emitida por Subsecretaría (Art. 91 D.209)' },
-        { id: 5, text: 'CURSO DE FORMACIÓN: Mínimo 90 horas pedagógicas aprobado (Art. 89 N°1 D.209)' },
-        { id: 6, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF. VV.PP. 250 UF (Art. 88 D.209 - Art. 29 Ley 21.659)' },
-        { id: 7, text: 'UNIFORME REGLAMENTARIO: Negro completo con leyenda "SEGURIDAD PRIVADA" en espalda (Art. 90 D.209)' },
-        { id: 8, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE emitida por Subsecretaría (Art. 49 y 51 D.209)' },
-        { id: 9, text: 'JORNADAS LABORALES: Acuerdo conforme Código del Trabajo o autorización Dirección del Trabajo' },
-        { id: 10, text: 'ANÁLISIS DEL ENTORNO: Debilidades y amenazas de la instalación (Art. 92, 93 y 94 N°3 D.209)' },
-        { id: 11, text: 'ELEMENTOS DEFENSIVOS Y DE PROTECCIÓN (bastón, esposas): Individualización conforme Art. 92 N°2 y Art. 93 D.209' },
-        { id: 12, text: 'CHALECO ANTICORTE ((Art. 93, Decreto 209): Certificación NIJ 0115.00 y seguro adicional 30 UF' }
-    ],
-    'evento-deportivo': [
-        { id: 1, text: 'SOLICITUD SIMPLE del club organizador a autoridad competente' },
-        { id: 2, text: 'PLAN DE SEGURIDAD conforme Ley 19.327 (Ley Espectáculos de Fútbol Profesional) y su reglamento' },
-        { id: 3, text: 'DESCRIPCIÓN DE FUNCIONES de guardias de seguridad en el evento' },
-        { id: 4, text: 'LISTADO DE LOS GG.SS. con individualización completa' },
-        { id: 5, text: 'CREDENCIAL VIGENTE O RESOLUCIÓN DE AUTORIZACIÓN de cada guardia (Art. 91 D.209)' },
-        { id: 6, text: 'CURSO DE FORMACIÓN: Mínimo 90 horas pedagógicas aprobado (Art. 89 N°1 D.209)' },
-        { id: 7, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF (Art. 88 D.209)' },
-        { id: 8, text: 'SEGURO RESPONSABILIDAD CIVIL EMPRESA RR.HH. (Art. 49 N°3 D.209 - Ley 21.659 Art. 29)' },
-        { id: 9, text: 'UNIFORME REGLAMENTARIO: Negro completo con "SEGURIDAD PRIVADA" (Art. 90 D.209)' },
-        { id: 10, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE emitida por Subsecretaría (Art. 49 y 51 D.209)' },
-        { id: 11, text: 'JEFE DE SEGURIDAD DEL CLUB: Credencial o autorización vigente conforme Ley 19.327' },
-        { id: 12, text: 'CONTRATO DEL JEFE DE SEGURIDAD con el club organizador' },
-        { id: 13, text: 'PLAN DE EVACUACIÓN Y EMERGENCIA del estadio' },
-        { id: 14, text: 'SERVICIOS MÉDICOS: Conforme exigencias Ley 19.327 y normativa sectorial aplicable' },
-        { id: 15, text: 'PROPUESTA DEL PARTIDO presentada por el equipo organizador a autoridades' }
-    ],
-    'evento-masivo': [
-        { id: 1, text: 'SOLICITUD SIMPLE de la empresa de recursos humanos u organizador' },
-        { id: 1, text: 'SOLICITUD FORMAL Los organizadores o productoras de un evento masivodeberá emitir un pronunciamiento sobre la factibilidad del evento ante Delegación Presidencial Regional respectiva (Art. 16 D.208) Se exceptuarán menos de 3000 personas' },
-        { id: 2, text: 'ACTA DESCRIPTIVA DEL EVENTO Acta (modelo aprobado por Subsecretaría) con tipo de evento, descripción detallada, fechas de montaje, desarrollo y desmontaje. (Art. 17 N°3, Decreto 208)' },
-        { id: 3, text: 'PLAN DE SEGURIDAD DEL EVENTO conforme Art. 18 D.208 (incluye análisis riesgos, medidas seguridad, protocolos emergencia)' },
-        { id: 4, text: 'LISTADO DEL PERSONAL DE SEGURIDAD PRIVADA Nómina actualizada del personal de guardias con sus certificados y credenciales vigentes emitidas por la Subsecretaría.' },
-        { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF (Art. 88 D.209)' },
-        { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL O CAUCIÓN para daños a asistentes/terceros/bienes (Art. 14 N°6 D.208)' },
-        { id: 7, text: 'DESIGNACIÓN DEL RESPONSABLE DE SEGURIDAD Designación formal del responsable de seguridad del evento, inscrita en el sub-registro de eventos masivos de la Subsecretaría. (Art. 13 N°5, Decreto 208)' },
-        { id: 8, text: 'INFORMACIÓN DE ENTRADAS Y AFORO Forma de venta y cantidad de entradas (no puede superar aforo de seguridad). Número estimado de asistentes. Si hay venta anticipada, informar en entradas que evento está sujeto a autorizaciones. (Art. 17 N°4 y N°5, Decreto 208)' },
-        { id: 9, text: 'PERMISOS Y AUTORIZACIONES ESPECIALES Solicitudes de permisos, patentes y autorizaciones de otros organismos públicos según naturaleza del evento (municipalidad, patentes de alcohol, etc.). (Art. 17 N°8, Decreto 208)' },
-        { id: 10, text: 'MEDIDAS DE MITIGACIÓN DE IMPACTO VECINAL Medidas para mitigar impacto en vecinos y acciones de aseo y ornato del entorno, coordinadas con la municipalidad. (Art. 17 N°10, Decreto 208)' },
-        { id: 11, text: 'AUTORIZACIÓN EMPRESA DE SEGURIDAD VIGENTE Resolución de autorización vigente de la empresa de seguridad privada emitida por la Subsecretaría de Prevención del Delito. (Arts. 49-51, Decreto 209)' },
-        { id: 12, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME Descripción detallada y fotografías del uniforme del personal de seguridad privada conforme Arts. 33 y 90 Decreto 209.' },
-        { id: 13, text: 'AUTORIZACIÓN DELEGACIÓN PRESIDENCIAL REGIONAL mediante resolución fundada (Art. 21 D.208)' },
-        { id: 14, text: 'CHALECO ANTICORTE PARA EL GG.SS. (Art. 93, Decreto 209): Certificación NIJ 0115.00 y seguro adicional 30 UF' },
-        { id: 15, text: 'COMUNICACIÓN A ORGANISMOS: Carabineros, Bomberos, Municipalidad, Servicio Salud (Art. 21 inciso final D.208)' }
-    ]
-}
+        'instalacion': [
+            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
+            { id: 2, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
+            { id: 3, text: 'LISTADO DE LOS GG.SS.,(Que realizan servicios en la instalación).' },
+            { id: 4, text: 'FOTOCOPIA DE CREDENCIAL O SOLICITUD DE CREDENCIAL (Art. 18 D/S 93), Que realizaran servicios en la instalación. (RESOL. 370 SUSPENDE CREDENCIALES HASTA AGOSTO 2024)' },
+            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 numero | D/S 93) El rubro contratado debe decir Vida no fallecimiento ni muerte.' },
+            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL EMPRESA RR.HH. (Art. Undécimo numero 3 D/S 867)' },
+            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS (Entre empresa de rr.hh. Y empleador Art. Séptimo D/S 867) No adjuntar orden de compra, correos de aceptación de servicios etc.' },
+            { id: 8, text: 'UNIFORME (conforme el art octavo D/S N° 867)' },
+            { id: 9, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE (Art. 5 D/S 93 y Art. decimo del D/S 867).' },
+            { id: 10, text: 'SERVICIOS DE 12 HORAS (F-35-B o RES. Acuerdo Marco Dirección del Trabajo).' },
+            { id: 11, text: 'INFORME DEBILIDADES Y AMENAZAS DE LA INSTALACIÓN (Inciso segundo Nro. 4, del apartado IV, D/exento 261, del 21.02.2020, del Min. Interior y seg. Pública.)' },
+            { id: 12, text: 'CHALECO ANTICORTE, Se debe adjuntar Certificación de la normativa técnica norteamericana NIJ 0115.00, Seguro de vida por 30 UF o su equivalente en dólares americanos ( viii. De los cargos de seguridad privada., 1.5.2 Chaleco anticorte, Decreto 32 Exento del 31.01.2024, modifica D 261.)' },
+            { id: 13, text: 'CHALECO ANTIBALA, Se debe adjuntar Resolución de autorización de uso otorgado por la AA.FF. (Art. 9 N° 2 y 3 del D/S 867)' },
+            { id: 14, text: 'BASTÓN, ESPOSAS DE SEGURIDAD, Se debe adjuntar resolución de autorización d uso otorgado por AA.FF. (Art 9 N° 3 del D/S 867)' }
+        ],
+        'evento-deportivo': [
+            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
+            { id: 2, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
+            { id: 3, text: 'ANEXO CON DESCRIPCIÓN DE LA LABOR DEL GG.SS. EN SU FACCIÓN.' },
+            { id: 4, text: 'LISTADO DE LOS GG.SS.' },
+            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 número 1 D/S 93)' },
+            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL DE LA EMPRESA DE RR.HH. (Art. Undécimo numero 3 D/S. 867)' },
+            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS ENTRE LA EMPRESA DE RR.HH. Y EL EQUIPO DE FUTBOL ORGANIZADOR (Art. Séptimo D/S. 867).' },
+            { id: 8, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME (conforme el art octavo D/S. N° 867)' },
+            { id: 9, text: 'AUTORIZACIÓN VIGENTE DE LA EMPRESA RR.HH. VIGENTE (Art. 5° D/S 93 y Art. decimo del D/S. 867).' },
+            { id: 10, text: 'CONTRATO AMBULANCIA POR PARTE DEL EQUIPO ORGANIZADOR.' },
+            { id: 11, text: 'AUTORIZACIÓN DE LA AMBULANCIA POR PARTE DE LA SEREMI DE SALUD.' },
+            { id: 12, text: 'FOTOCOPIA DE LA CREDENCIAL O DE LA AUTORIZACIÓN VIGENTE DEL JEFE DE SEGURIDAD DEL CLUB ORGANIZADOR (Ley 19.327, inciso primero letra a)' },
+            { id: 13, text: 'COPIA DEL CONTRATO DEL JEFE DE SEGURIDAD CON EL CLUB ORGANIZADOR (equipo)' },
+            { id: 14, text: 'PROPUESTA DEL PARTIDO PRESENTADA POR EL EQUIPO ORGANIZADOR.' },
+            { id: 15, text: 'PLAN DE EVACUACIÓN' }
+        ],
+        'evento-masivo': [
+            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
+            { id: 2, text: 'CUMPLE CON FECHA DE PRESENTACIÓN DEL ESTABLECIMIENTO DE UN SERVICIO. (Decreto 32 Articulo 1ro, Apartado IV)' },
+            { id: 3, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
+            { id: 4, text: 'LISTADO DE LOS GG.SS.' },
+            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 número 1. D/S 93)' },
+            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL DE LA EMPRESA DE RR.HH. (Art. Undécimo numero 3 D/S. 867)' },
+            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS (Art. Séptimo D/S. 867).' },
+            { id: 8, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME (conforme el art octavo D/S. N° 867)' },
+            { id: 9, text: 'CONTRATO AMBULANCIA' },
+            { id: 10, text: 'RES. AUTORIZ. AMBULANCIA DE LA SEREMI' },
+            { id: 11, text: 'ACTA DESCRIPTIVA MAS DE 3.000 PERSONAS https://www.chileatiende.gob.cl/fichas/3784-solicitar-autorizacion-para-realizar-eventos-masivos' },
+            { id: 12, text: 'AUTORIZACIÓN VIGENTE DE LA EMPRESA RR.HH. VIGENTE (Art. 5° D/S 93 y Art. decimo del D/S. 867.' },
+            { id: 13, text: 'PLAN DE EVACUACIÓN Y EMERGENCIA firmado, por un prevencionista de riesgos.' },
+            { id: 14, text: 'CARTA INFORMATIVA A: Carabineros del sector, bomberos, municipalidad del sector y servicio de salud del sector, la que debe venir con timbre de recepción.' }
+        ]
+    }
 };
 
 let currentSection = 'inicio'; // Variable para controlar la sección actual
@@ -421,16 +430,16 @@ async function generarReporte(sectionId) {
     
     if (sectionId === 'plan-seguridad') {
         sectionTitle = 'PLAN DE SEGURIDAD';
-        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
+        sectionSubtitle = 'Vigencia según estudio';
     } else if (sectionId === 'estudios-seguridad') {
         sectionTitle = 'ESTUDIOS DE SEGURIDAD';
-        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
+        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia según estudio';
     } else if (sectionId === 'servicentros') {
         sectionTitle = 'MEDIDAS DE SEG. SERVICENTROS';
-        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
+        sectionSubtitle = 'Vigencia 3 años - Ley 19.303';
     } else if (sectionId === 'sobre-500uf') {
         sectionTitle = 'MEDIDAS SOBRE 500 UF';
-        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
+        sectionSubtitle = 'Vigencia 3 años - Supermercados, joyerías, bancos y establecimientos que manejan valores superiores a 500 UF';
     } else if (sectionId === 'directiva-funcionamiento') {
         sectionTitle = 'DIRECTIVA DE FUNCIONAMIENTO';
         
