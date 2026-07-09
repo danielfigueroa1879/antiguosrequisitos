@@ -22,6 +22,9 @@
 <body>
     <button class="btn-volver" onclick="volverAtras()" style="display: none;">← Volver Atrás</button>
 
+    <div id="autosave-indicator" class="autosave-indicator" aria-live="polite"></div>
+    <input type="file" id="importar-pdf-input" accept="application/pdf,.pdf" style="display:none;">
+
     <div class="container">
         <div class="header">
             <div class="header-content">
@@ -49,7 +52,7 @@
                     
                     <button class="menu-card estudios-seguridad" onclick="mostrarSeccion('estudios-seguridad')">
                         <h3>📊 Estudios de Seguridad</h3>
-                        <p>Verificación de requisitos para estudios de seguridad de casa matriz y sus sucursales - Decreto 32 Exento del 2024.</p>
+                        <p>Verificación de requisitos para estudios de seguridad de casa matriz y sus sucursales</p>
                     </button>
                     
                     <button class="menu-card plan-seguridad" onclick="mostrarSeccion('plan-seguridad')">
@@ -58,20 +61,57 @@
                     </button>
                                         
                     <button class="menu-card servicentros" onclick="mostrarSeccion('servicentros')">
-                        <h3>⛽ Medidas Servicentros</h3>
-                        <p>Requisitos de seguridad para establecimientos de venta de combustible al público (3 años de vigencia)</p>
+                        <h3>⛽ Estudios Servicentros (Medidas de seg implementar)</h3>
+                        <p>Requisitos de seguridad para establecimientos de venta de combustible al público (Sin sistema de vigilancia privada 4 AÑOS - con vigilancia 2 años)</p>
                     </button>
                     
                     <button class="menu-card sobre-500uf" onclick="mostrarSeccion('sobre-500uf')">
                         <h3>💰 Medidas Sobre 500 UF</h3>
-                        <p>Supermercados, joyerías y establecimientos que manejan valores superiores a 500 UF (3 años)</p>
+                        <p>Supermercados, joyerías y establecimientos que manejan valores superiores a 500 UF Ley 21.659 - Decreto 209. (Sin sistema de vigilancia privada 4 AÑOS - con vigilancia 2 años)</p>
                     </button>
                     
                     <button class="menu-card directiva-funcionamiento" onclick="mostrarSeccion('directiva-funcionamiento')">
                         <h3>📄 Directiva de Funcionamiento</h3>
                         <p>Requisitos para directivas de instalaciones, eventos deportivos y otros eventos masivos</p>
-                        <p>Decreto N° 32 Exento del 31.01.2024</p>
+                        <p>Art. 92 Relamento 209 de la Ley 21659</p>
                     </button>
+
+                    <button class="menu-card historial" onclick="mostrarSeccion('historial')">
+                        <h3>📁 Historial de Reportes</h3>
+                        <p>Retome borradores en curso, vuelva a descargar reportes generados, o exporte/importe respaldos en JSON</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección Historial de Reportes -->
+            <div id="historial-section" class="form-section historial">
+                <div class="form-header historial">
+                    <h2>📁 HISTORIAL DE REPORTES</h2>
+                    <p>Reportes generados y borradores guardados en este equipo (almacenamiento local del navegador)</p>
+                </div>
+
+                <div class="historial-toolbar">
+                    <button class="btn btn-info" onclick="document.getElementById('importar-pdf-input').click()">📥 Importar PDF descargado</button>
+                    <button class="btn btn-danger" onclick="limpiarHistorial()">🗑️ Vaciar historial</button>
+                </div>
+                <p class="historial-ayuda">
+                    💡 <strong>¿Cómo funciona?</strong> Cada PDF que descargue desde este sistema guarda los datos dentro del mismo archivo.
+                    Para retomar un reporte en otro equipo o después de limpiar el navegador, pulse
+                    <strong>"Importar PDF descargado"</strong> y seleccione el PDF: los datos se restaurarán automáticamente.
+                </p>
+
+                <h3 class="historial-subtitulo">📄 Reportes generados</h3>
+                <div id="historial-lista" class="historial-lista">
+                    <!-- Se llena dinámicamente -->
+                </div>
+
+                <h3 class="historial-subtitulo">📝 Borradores en curso</h3>
+                <div id="borradores-lista" class="historial-lista">
+                    <!-- Se llena dinámicamente -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
                 </div>
             </div>
 
@@ -79,8 +119,10 @@
             <div id="plan-seguridad-section" class="form-section plan-seguridad">
                 <div class="form-header plan-seguridad">
                     <h2>📋 PLAN DE SEGURIDAD</h2>
-                    <p>Decreto Ley 3.607</p>
-        
+                    <p>Articulo N° 8 ins 2do. de la ley 21.659.</p>
+                    <p>Vigencia según estudio (4 años)</p>
+                    <p>Decreto N° 209</p>
+                    <p>Plazos 6 meses (28 mayo 2026) y 2 años (28 noviembre 2027)</p>
                 </div>
 
                 <div class="establecimiento-info">
@@ -146,9 +188,10 @@
                 <div class="form-header estudios-seguridad">
                     <h2>📊 ESTUDIOS DE SEGURIDAD</h2>
                     <p>Casa Matriz y Sucursales</p>
-                    <p>Decreto Ley 3.607</p>
-        
-                    
+                    <p>vigencia de 4 años - Ley N° 21.659.</p>
+                    <p>Articulo N° 8 ins 2do. de la ley 21.659</p>
+                    <p>Decreto Exento N° 209</p>
+                     <p>Plazos 6 meses (28 mayo 2026) y 2 años (28 noviembre 2027)</p>
                 </div>
 
                 <div class="establecimiento-info">
@@ -212,9 +255,10 @@
             <!-- Sección Medidas Servicentros -->
             <div id="servicentros-section" class="form-section servicentros">
                 <div class="form-header servicentros">
-                    <h2>⛽ MEDIDAS SERVICENTROS</h2>
-                    <p>Vigencia 3 años - Ley 19.303</p>
-                    <p>Decreto N° 32 Exento del 31.01.2024</p>
+                    <h2>⛽ SERVICENTROS (ESTUDIOS DE SEGURIDAD)</h2>
+                    <p>Articulo N° 8 ins 2do. de la ley 21.659</p>
+                    <p>Dcreto 209</p>
+                    <p>Plazos 6 meses (28 mayo 2026)</p>
                 </div>
 
                 <div class="establecimiento-info">
@@ -427,10 +471,12 @@
         </div>
     </div>
 
-    <!-- Enlaza el archivo JavaScript externo -->
-    <script src="script.js"></script>
     <!-- Incluye jsPDF para la generación de PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <!-- pdf-lib para leer los datos embebidos al importar un PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <!-- Enlaza el archivo JavaScript externo -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -9,53 +9,44 @@
 // Datos de los requisitos para cada sección
 const requisitosData = {
     'plan-seguridad': [
-        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA.' },
-        { id: 2, text: 'EL PLAN DE SEGURIDAD, CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
-        { id: 3, text: 'ENCARGADO DE SEGURIDAD: EL ENCARGADO DE SEGURIDAD DEBE ESTAR ACREDITADO (AUTORIZACIÓN RESOLUCIÓN) ASÍ COMO TAMBIÉN EL SUPLENTE. (APARTADO IV: CONFECCIÓN DE INSTRUMENTOS DE SEGURIDAD; N° 2 PLAN DE SEGURIDAD ; ENCARGADO DE SEGURIDAD)' },
-        { id: 4, text: 'CAJERO AUTOMÁTICO: CUANTO CAJEROS SE MANTIENEN EN EL BANCO Y NÚMEROS ATM.' },
-        { id: 5, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS)' },
-        { id: 6, text: 'INFORMACIÓN PARA DECISIONES POLICIALES' },
-        { id: 7, text: 'FOTOGRAFÍA Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS.' },
-        { id: 8, text: 'Copia de la Autorización del Encargado de Seguridad Suplente (conforme a al Manual Operativo en Materias de Seguridad Privada, aprobado mediante Decreto Exento N° 32 del 31.01.2024, del Ministerio del Interior y Seguridad Publica).' },
-        { id: 9, text: 'COMODATOS Y PADRONES O CERTIFICADO DE INSCRIPCIÓN DE TODOS LOS ARMAMENTOS Y CANTIDADES copia del reporte o despliegue del armamento de la empresa, otorgado por la Dirección General de Movilización Nacional (D.G.M.N.).' },
-        { id: 10, text: 'Copia de los CERTIFICADOS DEL LABORATORIO DE RESISTENCIA BALÍSTICA de los chalecos antibalas, otorgado por el Instituto de Investigaciones y Control del Ejército de Chile (IDIC), respecto de cumplir con la normativa técnica de ensayo balístico NIJ 0101.04., cuyo nivel de amenaza no sea superior a 40 mm.' },
-        { id: 11, text: 'Copia del SEGURO DE VIDA POR 30 UF o su equivalente en dólares americanos, esto para el caso que los CHALECOS ANTIBALAS no cumpla con la función, conforme a lo estipulado en el artículo noveno, numeral 1) del Decreto Supremo N° 867, del 13.06.2017 del Ministerio del Interior y Seguridad Pública, en concordancia con el Manual Operativo en materias de Seguridad Privada, aprobado a través del Decreto Exento N° 32 de fecha 31.01.2024, del mismo Ministerio.' },
-        { id: 12, text: 'SEGURO DE VIDA DE LOS VIGILANTES PRIVADOS, la que debe considerar el término de "Vida" o "Seguro de Vida.' },
-        { id: 13, text: 'OPERADORES CCTV QUE EMPRESA MONITOREA DESDE SANTIAGO ACREDITACIÓN DE LA EMPRESA Y OPERADORES.' },
-        { id: 14, text: 'PLAN DE EMERGENCIA Y CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
-        { id: 15, text: 'Adjunta los Anexos "A,B,C,D,E y F", conforme a lo establecido en el formato del Plan de Seguridad.' }
+        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA presentada conforme al artículo 15 del Decreto N° 209 de 2024.' },
+        { id: 2, text: 'PLAN DE SEGURIDAD POR CADA SUCURSAL O INSTALACIÓN: El plan se entiende como parte integrante del Estudio de Seguridad y debe materializar las directrices de seguridad contenidas en el estudio corporativo, identificando áreas sensibles de la instalación específica (Art. 15 inciso 2° Decreto N° 209).' },
+        { id: 3, text: 'JEFE DE SEGURIDAD CORPORATIVO: Debe estar autorizado mediante Resolución de la Subsecretaría de Prevención del Delito. Requiere título profesional (mínimo 8 semestres) + curso de especialidad en seguridad o materias afines (Art. 22 y 23 Decreto N° 209).' },
+        { id: 4, text: 'ENCARGADO DE SEGURIDAD DE LA SUCURSAL: Debe estar autorizado mediante Resolución de la Subsecretaría de Prevención del Delito. Requiere cumplir mismos requisitos de vigilante privado + curso de 120 horas en seguridad o materias afines (Art. 25 Decreto N° 209).' },
+        { id: 5, text: 'CAJEROS AUTOMÁTICOS: Indicar cantidad de cajeros que se mantienen en la instalación y números ATM.' },
+        { id: 6, text: 'EMPRESA DE SEGURIDAD PRIVADA (si subcontrata personal): Adjuntar Resolución de Autorización de la empresa emitida por la Subsecretaría de Prevención del Delito, con listado actualizado del personal contratado (Art. 21 inciso 4° y Art. 49-51 Decreto N° 209).' },
+        { id: 7, text: 'INFORMACIÓN PARA DECISIONES POLICIALES: Incluida en el plan conforme artículo 15 del Decreto N° 209.' },
+        { id: 8, text: 'FOTOGRAFÍAS Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS: Autorizados por la Subsecretaría de Prevención del Delito mediante resolución (Art. 26 y siguientes Decreto N° 209).' },
+        { id: 9, text: 'GUARDIAS DE SEGURIDAD DE APOYO (solo si aplica): Listado con credenciales autorizadas por Subsecretaría. IMPORTANTE: Los guardias de seguridad NO portan armas y solo apoyan funciones de vigilantes privados (Art. 21 inciso final y Art. 86-91 Decreto N° 209).' },
+        { id: 10, text: 'CONTRATOS DE COMODATO DE ARMAMENTO Y MUNICIONES: Conforme artículos 99 y siguientes del Decreto Supremo N° 83 de 2007 (Reglamento Control de Armas). Certificado de inscripción otorgado por DGMN (Art. 15 N°5 Decreto N° 209). El armamento es siempre de propiedad de la entidad obligada.' },
+        { id: 11, text: 'CERTIFICADOS IDIC DE CHALECOS ANTIBALAS: Resistencia balística NIJ 0101.04, nivel de amenaza no superior a 40 mm (Art. 31 Decreto N° 209). ELEMENTOS MÍNIMOS OBLIGATORIOS POR CADA VIGILANTE: Chaleco antibalas + Bastón retráctil + Esposas.' },
+        { id: 12, text: 'SEGURO DE VIDA POR DEFICIENCIA DE CHALECOS: 30 UF o equivalente en dólares si los chalecos antibalas no cumplen su función protectora (normativa vigente).' },
+        { id: 13, text: 'SEGURO DE VIDA DE VIGILANTES PRIVADOS: Mínimo 250 UF por vigilante. La póliza debe considerar expresamente el término "Vida" o "Seguro de Vida" (Art. 29 Ley 21.659).' },
+        { id: 14, text: 'SISTEMA CCTV Y OPERADORES: Si el monitoreo es realizado por empresa externa, adjuntar Resolución de Autorización de la empresa emitida por Subsecretaría de Prevención del Delito y credenciales vigentes de los operadores CCTV autorizados (Art. 15 Decreto N° 209).' },
+        { id: 15, text: 'PLAN DE EMERGENCIA Y EVACUACIÓN: Incluye croquis de ubicación, elementos de emergencia y vías de evacuación de la instalación/sucursal específica.' },
+        { id: 16, text: 'ESTRUCTURA DEL ORGANISMO INTERNO DE SEGURIDAD: Debe incluir: Jefe de Seguridad (corporativo), Encargado de Seguridad (por sucursal), Encargado de Armas, Vigilantes Privados, Guardias de Seguridad de apoyo (si corresponde) - Art. 21 Decreto N° 209.' },
+        { id: 17, text: 'PROTOCOLOS DE ACTUACIÓN Y PROCEDIMIENTOS: Específicos de la sucursal para neutralizar vulnerabilidades y debilidades identificadas, con acciones de contingencia ante emergencias o comisión de ilícitos.' },
+        { id: 18, text: 'IDENTIFICACIÓN DE ÁREAS VULNERABLES: De la instalación/sucursal específica, con medidas técnicas y materiales propuestas para neutralizar situaciones delictuales (Art. 15 N°3 segundo párrafo Decreto N° 209).' }
     ],
     'estudios-seguridad': [
-        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA.' },
-        { id: 2, text: 'EL ESTUDIO DE SEGURIDAD, CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
-        { id: 3, text: 'ENCARGADO DE SEGURIDAD: EL ENCARGADO DE SEGURIDAD DEBE ESTAR ACREDITADO (AUTORIZACIÓN RESOLUCIÓN) ASÍ COMO TAMBIÉN EL SUPLENTE. (APARTADO IV: CONFECCIÓN DE INSTRUMENTOS DE SEGURIDAD; N° 2 PLAN DE SEGURIDAD ; ENCARGADO DE SEGURIDAD)' },
-        { id: 4, text: 'CAJERO AUTOMÁTICO: CUANTO CAJEROS SE MANTIENEN EN EL BANCO Y NÚMEROS ATM.' },
-        { id: 5, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS)' },
-        { id: 6, text: 'INFORMACIÓN PARA DECISIONES POLICIALES' },
-        { id: 7, text: 'FOTOGRAFÍA Y LISTADO DE CREDENCIALES DE VIGILANTES PRIVADOS.' },
-        { id: 8, text: 'Copia de la Autorización del Encargado de Seguridad Suplente (conforme a al Manual Operativo en Materias de Seguridad Privada, del Ministerio del Interior y Seguridad Publica).' },
-        { id: 9, text: 'COMODATOS Y PADRONES O CERTIFICADO DE INSCRIPCIÓN DE TODOS LOS ARMAMENTOS Y CANTIDADES copia del reporte o despliegue del armamento de la empresa, otorgado por la Dirección General de Movilización Nacional (D.G.M.N.).' },
-        { id: 10, text: 'Copia de los CERTIFICADOS DEL LABORATORIO DE RESISTENCIA BALÍSTICA de los chalecos antibalas, otorgado por el Instituto de Investigaciones y Control del Ejército de Chile (IDIC), respecto de cumplir con la normativa técnica de ensayo balístico NIJ 0101.04., cuyo nivel de amenaza no sea superior a 40 mm.' },
-        { id: 11, text: 'Copia del SEGURO DE VIDA POR 30 UF o su equivalente en dólares americanos, esto para el caso que los CHALECOS ANTIBALAS no cumpla con la función, conforme a lo estipulado en el artículo noveno, numeral 1) del Decreto Supremo N° 867, del 13.06.2017 del Ministerio del Interior y Seguridad Pública, en concordancia con el Manual Operativo en materias de Seguridad Privada.' },
-        { id: 12, text: 'SEGURO DE VIDA DE LOS VIGILANTES PRIVADOS, la que debe considerar el término de "Vida" o "Seguro de Vida.' },
-        { id: 13, text: 'OPERADORES CCTV QUE EMPRESA MONITOREA DESDE SANTIAGO ACREDITACIÓN DE LA EMPRESA Y OPERADORES.' },
-        { id: 14, text: 'PLAN DE EMERGENCIA Y CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
-        { id: 15, text: 'PRESENTA TODOS LOS PLANES DE CADA SUCURSAL (Cada sucursal debe tener su plan de seguridad individual que forme parte del estudio general de la casa matriz).' }
-    ],
-    'servicentros': [
-        { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
-        { id: 2, text: 'MEDIDAS DE SEGURIDAD CUMPLEN CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN. (página 108 Y 109 establecimiento de venta y combustible al público)' },
-        { id: 3, text: 'CAJERO AUTOMÁTICO: CUAL ES EL NÚMERO ATM Y A QUE BANCO PERTENECE EL CAJERO AUTOMÁTICO. (FOTOGRAFÍAS- INCLUIR UBICACIÓN EN CROQUIS.)' },
-        { id: 4, text: 'QUE EMPRESA DE TRANSPORTE DE TRANSPORTE DE VALORES ES LA ENCARGADA DE REALIZAR LA CARGA Y DESCARGA DEL CAJERO. (aislarse transitoriamente por parte de las entidades emisoras o receptoras o cualquier establecimiento que las contenga)' },
-        { id: 5, text: 'MANTIENE ESTANCO PARA LA CARGA Y DESCARGA DEL CAJERO; SI NO TIENE ESTANCO DEBE APOYAR LA OPERACIÓN CON UNA CÁMARA DE SEGURIDAD.(Art. 8º inciso 1 del Decreto Nº 1.814 del 12.11.2014) (Agregar fotografías y croquis)' },
-        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017- El Decreto Exento N° 32 del 31.01.2024)' },
-        { id: 7, text: 'MÁXIMO DE DINERO QUE MANTIENE LOS ATENDEDORES O BOMBEROS.' },
-        { id: 8, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO.' },
-        { id: 9, text: 'CROQUIS DE CÁMARAS DE SEGURIDAD Y TECNOLOGÍA APLICADA (SENSORES DE HUMO, SENSORES DE MOVIMIENTO, ALARMAS, ETC.)' },
-        { id: 10, text: 'ANÁLISIS DE VULNERABILIDADES Y MITIGACIÓN DE ELLAS.' },
-        { id: 11, text: 'PLAN DE EMERGENCIA Y SUS ANEXOS.' },
-        { id: 12, text: 'CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' },
-        { id: 13, text: 'TODAS LAS FOTOGRAFÍAS DEBEN VENIR CON UNA DESCRIPCIÓN DE ELLAS.' }
+        { id: 1, text: 'SOLICITUD SIMPLE DE LA ENTIDAD OBLIGADA: Presentada ante la Subsecretaría de Prevención del Delito conforme artículo 15 del Decreto N° 209 de 2024. Plazo: 60 días desde notificación de resolución que la determina como entidad obligada.' },
+        { id: 2, text: 'INFORMACIÓN GENERAL DE LA ENTIDAD: Razón social, nombre de fantasía, RUT, giro, domicilio legal, correo electrónico y teléfono de contacto (Art. 15 N°1 Decreto N° 209).' },
+        { id: 3, text: 'REPRESENTANTE LEGAL: Nombre completo, cédula de identidad, domicilio, instrumento que acredita personería, correo electrónico y teléfono de contacto (Art. 15 N°2 Decreto N° 209).' },
+        { id: 4, text: 'INSTALACIONES O SUCURSALES: Indicación de domicilios respectivos de TODAS las instalaciones/sucursales de la entidad obligada (Art. 15 N°3 Decreto N° 209).' },
+        { id: 5, text: 'JEFE DE SEGURIDAD CORPORATIVO/NACIONAL: Debe estar autorizado por Subsecretaría de Prevención del Delito mediante Resolución. Requisitos: Título profesional 8 semestres + curso de especialidad en seguridad o materias afines (Art. 22 y 23 Decreto N° 209). Debe visar y ejecutar el estudio.' },
+        { id: 6, text: 'ENCARGADOS DE SEGURIDAD POR CADA SUCURSAL Y SUPLENTES: Autorizados por Subsecretaría mediante Resolución. Requisitos: Iguales a vigilante privado + curso de 120 horas en seguridad o materias afines (Art. 25 Decreto N° 209). Velan por cumplimiento del estudio en cada recinto.' },
+        { id: 7, text: 'IDENTIFICACIÓN DE RIESGOS Y VULNERABILIDADES: Por cada instalación o sucursal, con análisis detallado (Art. 15 N°4 Decreto N° 209).' },
+        { id: 8, text: 'PERSONAL DE SEGURIDAD PRIVADA CONTRATADO: Indicar si es contratado directamente por la entidad o subcontratado a empresa de seguridad privada, con individualizaciones completas (Art. 15 N°5 Decreto N° 209).' },
+        { id: 9, text: 'MEDIDAS DE SEGURIDAD YA IMPLEMENTADAS: Indicando su ubicación específica por instalación o sucursal (Art. 15 N°6 Decreto N° 209).' },
+        { id: 10, text: 'PROPUESTA DE MEDIDAS DE SEGURIDAD CONCRETAS: Señalando cómo estas permiten neutralizar las vulnerabilidades identificadas. Si incluye incorporación de personal de seguridad privada, precisar forma de contratación (Art. 15 N°7 Decreto N° 209).' },
+        { id: 11, text: 'DOCUMENTOS Y ANTECEDENTES FUNDANTES: Que sirven de fundamento para acreditar las vulnerabilidades identificadas y la pertinencia de las medidas de seguridad propuestas (Art. 15 N°8 Decreto N° 209).' },
+        { id: 12, text: 'INFORMACIÓN GENERAL Y PARTICULAR: De la entidad obligada y sus instalaciones (Art. 15 segundo párrafo N°1 Decreto N° 209).' },
+        { id: 13, text: 'ESTRUCTURA DEL ORGANISMO DE SEGURIDAD INTERNO: Detalle completo incluyendo: Jefe de Seguridad, Encargados de Seguridad por sucursal, Encargados de Armas, Vigilantes Privados, Guardias de Seguridad de apoyo. ACCIONES DE CONTINGENCIA ante emergencias o eventual comisión de ilícitos (Art. 15 segundo párrafo N°2 Decreto N° 209). IMPORTANTE: Cualquier cambio debe informarse a Subsecretaría y autoridad fiscalizadora en 15 días.' },
+        { id: 14, text: 'ÁREAS VULNERABLES Y CONDICIONES DE RIESGO: Identificación detallada con proposición de medidas técnicas y materiales tendientes a neutralizar y evitar situaciones delictuales (Art. 15 segundo párrafo N°3 Decreto N° 209).' },
+        { id: 15, text: 'NÚMERO DE VIGILANTES PRIVADOS: Con los que contará la entidad obligada y las modalidades a las que se sujetará la organización y funcionamiento del servicio (Art. 15 segundo párrafo N°4 Decreto N° 209).' },
+        { id: 16, text: 'ARMAMENTO Y MUNICIONES: Cantidad y tipo, acompañando contratos de comodato conforme artículos 99 y siguientes del DS N° 83 de 2007 sobre Control de Armas. Certificados de inscripción DGMN (Art. 15 segundo párrafo N°5 Decreto N° 209).' },
+        { id: 17, text: 'MEDIDAS DE SEGURIDAD CONCRETAS PARA CUMPLIMIENTO: De la Ley 21.659 y Decreto 209, con especificación detallada (Art. 15 segundo párrafo N°6 Decreto N° 209).' },
+        { id: 18, text: 'PLANES DE SEGURIDAD DE CADA SUCURSAL: Cada sucursal o instalación debe tener su plan de seguridad individual que materializa las directrices del estudio corporativo y forma parte integrante del mismo (Art. 15 inciso 2° Decreto N° 209). Los planes deben estar suscritos por Gerente General/Representante Legal junto con Jefe de Seguridad corporativo.' }
     ],
     'sobre-500uf': [
         { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
@@ -63,7 +54,7 @@ const requisitosData = {
         { id: 3, text: 'CAJERO AUTOMÁTICO: CUAL ES EL NÚMERO ATM Y A QUE BANCO PERTENECE EL CAJERO AUTOMÁTICO. (FOTOGRAFÍAS- INCLUIR UBICACIÓN EN CROQUIS.)' },
         { id: 4, text: 'QUE EMPRESA DE TRANSPORTE DE TRANSPORTE DE VALORES ES LA ENCARGADA DE REALIZAR LA CARGA Y DESCARGA DEL CAJERO. (aislarse transitoriamente por parte de las entidades emisoras o receptoras o cualquier establecimiento que las contenga)' },
         { id: 5, text: 'MANTIENE ESTANCO PARA LA CARGA Y DESCARGA DEL CAJERO; SI NO TIENE ESTANCO DEBE APOYAR LA OPERACIÓN CON UNA CÁMARA DE SEGURIDAD.(Art. 8º inciso 1 del Decreto Nº 1.814 del 12.11.2014) (Agregar fotografías y croquis)' },
-        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017' },
+        { id: 6, text: 'OPERADOR CCTV: SI MANTIENE PROPIOS O DE LA CENTRAL SANTIAGO, DEBE GESTIONAR LAS AUTORIZACIONES DE LOS OPERADORES QUE REALIZAN ESTA LABOR. ADJUNTAR AUTORIZACIÓN DE LA EMPRESA Y DEL PERSONAL QUE REALIZA ESTE SERVICIO. (Decreto Supremo N° 867, de 2017- El Decreto Exento N° 32 del 31.01.2024)' },
         { id: 7, text: 'EMPRESA DE GUARDIA DE SEGURIDAD DEBE ADJUNTAR RESOLUCIÓN DE AUTORIZACIÓN DE LA EMPRESA DE RR.HH. Y RESOLUCIÓN DE AUTORIZACIÓN DE LA DIRECTIVA, CON LISTADO DE GG.SS. ACTUALIZADO. (SIN IMPLEMENTOS )' },
         { id: 8, text: 'CROQUIS DE CÁMARAS DE SEGURIDAD Y TECNOLOGÍA APLICADA (SENSORES DE HUMO, SENSORES DE MOVIMIENTO, ALARMAS, ETC.)' },
         { id: 9, text: 'ANÁLISIS DE VULNERABILIDADES Y MITIGACIÓN DE ELLAS.' },
@@ -71,61 +62,62 @@ const requisitosData = {
         { id: 11, text: 'CROQUIS UBICACIÓN, ELEMENTOS DE EMERGENCIA Y VÍAS DE EVACUACIÓN.' }
     ],
     'directiva-funcionamiento': {
-        'instalacion': [
-            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
-            { id: 2, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
-            { id: 3, text: 'LISTADO DE LOS GG.SS.,(Que realizan servicios en la instalación).' },
-            { id: 4, text: 'FOTOCOPIA DE CREDENCIAL O SOLICITUD DE CREDENCIAL (Art. 18 D/S 93), Que realizaran servicios en la instalación. (RESOL. 370 SUSPENDE CREDENCIALES HASTA AGOSTO 2024)' },
-            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 numero | D/S 93) El rubro contratado debe decir Vida no fallecimiento ni muerte.' },
-            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL EMPRESA RR.HH. (Art. Undécimo numero 3 D/S 867)' },
-            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS (Entre empresa de rr.hh. Y empleador Art. Séptimo D/S 867) No adjuntar orden de compra, correos de aceptación de servicios etc.' },
-            { id: 8, text: 'UNIFORME (conforme el art octavo D/S N° 867)' },
-            { id: 9, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE (Art. 5 D/S 93 y Art. decimo del D/S 867).' },
-            { id: 10, text: 'SERVICIOS DE 12 HORAS (F-35-B o RES. Acuerdo Marco Dirección del Trabajo).' },
-            { id: 11, text: 'INFORME DEBILIDADES Y AMENAZAS DE LA INSTALACIÓN (Inciso segundo Nro. 4, del apartado IV, D/exento 261, del 21.02.2020, del Min. Interior y seg. Pública.)' },
-            { id: 12, text: 'CHALECO ANTICORTE, Se debe adjuntar Certificación de la normativa técnica norteamericana NIJ 0115.00, Seguro de vida por 30 UF o su equivalente en dólares americanos ( viii. De los cargos de seguridad privada., 1.5.2 Chaleco anticorte, Decreto 32 Exento del 31.01.2024, modifica D 261.)' },
-            { id: 13, text: 'CHALECO ANTIBALA, Se debe adjuntar Resolución de autorización de uso otorgado por la AA.FF. (Art. 9 N° 2 y 3 del D/S 867)' },
-            { id: 14, text: 'BASTÓN, ESPOSAS DE SEGURIDAD, Se debe adjuntar resolución de autorización d uso otorgado por AA.FF. (Art 9 N° 3 del D/S 867)' }
-        ],
-        'evento-deportivo': [
-            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
-            { id: 2, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
-            { id: 3, text: 'ANEXO CON DESCRIPCIÓN DE LA LABOR DEL GG.SS. EN SU FACCIÓN.' },
-            { id: 4, text: 'LISTADO DE LOS GG.SS.' },
-            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 número 1 D/S 93)' },
-            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL DE LA EMPRESA DE RR.HH. (Art. Undécimo numero 3 D/S. 867)' },
-            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS ENTRE LA EMPRESA DE RR.HH. Y EL EQUIPO DE FUTBOL ORGANIZADOR (Art. Séptimo D/S. 867).' },
-            { id: 8, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME (conforme el art octavo D/S. N° 867)' },
-            { id: 9, text: 'AUTORIZACIÓN VIGENTE DE LA EMPRESA RR.HH. VIGENTE (Art. 5° D/S 93 y Art. decimo del D/S. 867).' },
-            { id: 10, text: 'CONTRATO AMBULANCIA POR PARTE DEL EQUIPO ORGANIZADOR.' },
-            { id: 11, text: 'AUTORIZACIÓN DE LA AMBULANCIA POR PARTE DE LA SEREMI DE SALUD.' },
-            { id: 12, text: 'FOTOCOPIA DE LA CREDENCIAL O DE LA AUTORIZACIÓN VIGENTE DEL JEFE DE SEGURIDAD DEL CLUB ORGANIZADOR (Ley 19.327, inciso primero letra a)' },
-            { id: 13, text: 'COPIA DEL CONTRATO DEL JEFE DE SEGURIDAD CON EL CLUB ORGANIZADOR (equipo)' },
-            { id: 14, text: 'PROPUESTA DEL PARTIDO PRESENTADA POR EL EQUIPO ORGANIZADOR.' },
-            { id: 15, text: 'PLAN DE EVACUACIÓN' }
-        ],
-        'evento-masivo': [
-            { id: 1, text: 'SOLICITUD SIMPLE (De la empresa)' },
-            { id: 2, text: 'CUMPLE CON FECHA DE PRESENTACIÓN DEL ESTABLECIMIENTO DE UN SERVICIO. (Decreto 32 Articulo 1ro, Apartado IV)' },
-            { id: 3, text: 'CUMPLE CON EL ORDEN ESTABLECIDO DEL MANUAL DE ORGANIZACIÓN.' },
-            { id: 4, text: 'LISTADO DE LOS GG.SS.' },
-            { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD (Art. 13 número 1. D/S 93)' },
-            { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL DE LA EMPRESA DE RR.HH. (Art. Undécimo numero 3 D/S. 867)' },
-            { id: 7, text: 'CONTRATO DE PRESTACIÓN DE SERVICIOS (Art. Séptimo D/S. 867).' },
-            { id: 8, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME (conforme el art octavo D/S. N° 867)' },
-            { id: 9, text: 'CONTRATO AMBULANCIA' },
-            { id: 10, text: 'RES. AUTORIZ. AMBULANCIA DE LA SEREMI' },
-            { id: 11, text: 'ACTA DESCRIPTIVA MAS DE 3.000 PERSONAS https://www.chileatiende.gob.cl/fichas/3784-solicitar-autorizacion-para-realizar-eventos-masivos' },
-            { id: 12, text: 'AUTORIZACIÓN VIGENTE DE LA EMPRESA RR.HH. VIGENTE (Art. 5° D/S 93 y Art. decimo del D/S. 867.' },
-            { id: 13, text: 'PLAN DE EVACUACIÓN Y EMERGENCIA firmado, por un prevencionista de riesgos.' },
-            { id: 14, text: 'CARTA INFORMATIVA A: Carabineros del sector, bomberos, municipalidad del sector y servicio de salud del sector, la que debe venir con timbre de recepción.' }
-        ]
-    }
+    'instalacion': [
+        { id: 1, text: 'SOLICITUD SIMPLE ante Subsecretaría de Prevención del Delito (De la entidad empleadora o empresa RR.HH.)' },
+        { id: 2, text: 'PRESENTACIÓN CON 15 DÍAS DE ANTICIPACIÓN al inicio del servicio (Art. 92 inciso 6° D.209)' },
+        { id: 3, text: 'LISTADO DE LOS GG.SS. con individualización completa (Art. 92 N°2 D.209)' },
+        { id: 4, text: 'CREDENCIAL VIGENTE O RESOLUCIÓN DE AUTORIZACIÓN de cada guardia emitida por Subsecretaría (Art. 91 D.209)' },
+        { id: 5, text: 'CURSO DE FORMACIÓN: Mínimo 90 horas pedagógicas aprobado (Art. 89 N°1 D.209)' },
+        { id: 6, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF. VV.PP. 250 UF (Art. 88 D.209 - Art. 29 Ley 21.659)' },
+        { id: 7, text: 'UNIFORME REGLAMENTARIO: Negro completo con leyenda "SEGURIDAD PRIVADA" en espalda (Art. 90 D.209)' },
+        { id: 8, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE emitida por Subsecretaría (Art. 49 y 51 D.209)' },
+        { id: 9, text: 'JORNADAS LABORALES: Acuerdo conforme Código del Trabajo o autorización Dirección del Trabajo' },
+        { id: 10, text: 'ANÁLISIS DEL ENTORNO: Debilidades y amenazas de la instalación (Art. 92, 93 y 94 N°3 D.209)' },
+        { id: 11, text: 'ELEMENTOS DEFENSIVOS Y DE PROTECCIÓN (bastón, esposas): Individualización conforme Art. 92 N°2 y Art. 93 D.209' },
+        { id: 12, text: 'CHALECO ANTICORTE ((Art. 93, Decreto 209): Certificación NIJ 0115.00 y seguro adicional 30 UF' }
+    ],
+    'evento-deportivo': [
+        { id: 1, text: 'SOLICITUD SIMPLE del club organizador a autoridad competente' },
+        { id: 2, text: 'PLAN DE SEGURIDAD conforme Ley 19.327 (Ley Espectáculos de Fútbol Profesional) y su reglamento' },
+        { id: 3, text: 'DESCRIPCIÓN DE FUNCIONES de guardias de seguridad en el evento' },
+        { id: 4, text: 'LISTADO DE LOS GG.SS. con individualización completa' },
+        { id: 5, text: 'CREDENCIAL VIGENTE O RESOLUCIÓN DE AUTORIZACIÓN de cada guardia (Art. 91 D.209)' },
+        { id: 6, text: 'CURSO DE FORMACIÓN: Mínimo 90 horas pedagógicas aprobado (Art. 89 N°1 D.209)' },
+        { id: 7, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF (Art. 88 D.209)' },
+        { id: 8, text: 'SEGURO RESPONSABILIDAD CIVIL EMPRESA RR.HH. (Art. 49 N°3 D.209 - Ley 21.659 Art. 29)' },
+        { id: 9, text: 'UNIFORME REGLAMENTARIO: Negro completo con "SEGURIDAD PRIVADA" (Art. 90 D.209)' },
+        { id: 10, text: 'AUTORIZACIÓN EMPRESA RR.HH. VIGENTE emitida por Subsecretaría (Art. 49 y 51 D.209)' },
+        { id: 11, text: 'JEFE DE SEGURIDAD DEL CLUB: Credencial o autorización vigente conforme Ley 19.327' },
+        { id: 12, text: 'CONTRATO DEL JEFE DE SEGURIDAD con el club organizador' },
+        { id: 13, text: 'PLAN DE EVACUACIÓN Y EMERGENCIA del estadio' },
+        { id: 14, text: 'SERVICIOS MÉDICOS: Conforme exigencias Ley 19.327 y normativa sectorial aplicable' },
+        { id: 15, text: 'PROPUESTA DEL PARTIDO presentada por el equipo organizador a autoridades' }
+    ],
+    'evento-masivo': [
+        { id: 1, text: 'SOLICITUD SIMPLE de la empresa de recursos humanos u organizador' },
+        { id: 1, text: 'SOLICITUD FORMAL Los organizadores o productoras de un evento masivodeberá emitir un pronunciamiento sobre la factibilidad del evento ante Delegación Presidencial Regional respectiva (Art. 16 D.208) Se exceptuarán menos de 3000 personas' },
+        { id: 2, text: 'ACTA DESCRIPTIVA DEL EVENTO Acta (modelo aprobado por Subsecretaría) con tipo de evento, descripción detallada, fechas de montaje, desarrollo y desmontaje. (Art. 17 N°3, Decreto 208)' },
+        { id: 3, text: 'PLAN DE SEGURIDAD DEL EVENTO conforme Art. 18 D.208 (incluye análisis riesgos, medidas seguridad, protocolos emergencia)' },
+        { id: 4, text: 'LISTADO DEL PERSONAL DE SEGURIDAD PRIVADA Nómina actualizada del personal de guardias con sus certificados y credenciales vigentes emitidas por la Subsecretaría.' },
+        { id: 5, text: 'SEGURO DE VIDA GUARDIA DE SEGURIDAD: Mínimo 132 UF (Art. 88 D.209)' },
+        { id: 6, text: 'SEGURO DE RESPONSABILIDAD CIVIL O CAUCIÓN para daños a asistentes/terceros/bienes (Art. 14 N°6 D.208)' },
+        { id: 7, text: 'DESIGNACIÓN DEL RESPONSABLE DE SEGURIDAD Designación formal del responsable de seguridad del evento, inscrita en el sub-registro de eventos masivos de la Subsecretaría. (Art. 13 N°5, Decreto 208)' },
+        { id: 8, text: 'INFORMACIÓN DE ENTRADAS Y AFORO Forma de venta y cantidad de entradas (no puede superar aforo de seguridad). Número estimado de asistentes. Si hay venta anticipada, informar en entradas que evento está sujeto a autorizaciones. (Art. 17 N°4 y N°5, Decreto 208)' },
+        { id: 9, text: 'PERMISOS Y AUTORIZACIONES ESPECIALES Solicitudes de permisos, patentes y autorizaciones de otros organismos públicos según naturaleza del evento (municipalidad, patentes de alcohol, etc.). (Art. 17 N°8, Decreto 208)' },
+        { id: 10, text: 'MEDIDAS DE MITIGACIÓN DE IMPACTO VECINAL Medidas para mitigar impacto en vecinos y acciones de aseo y ornato del entorno, coordinadas con la municipalidad. (Art. 17 N°10, Decreto 208)' },
+        { id: 11, text: 'AUTORIZACIÓN EMPRESA DE SEGURIDAD VIGENTE Resolución de autorización vigente de la empresa de seguridad privada emitida por la Subsecretaría de Prevención del Delito. (Arts. 49-51, Decreto 209)' },
+        { id: 12, text: 'DESCRIPCIÓN Y FOTOGRAFÍA DEL UNIFORME Descripción detallada y fotografías del uniforme del personal de seguridad privada conforme Arts. 33 y 90 Decreto 209.' },
+        { id: 13, text: 'AUTORIZACIÓN DELEGACIÓN PRESIDENCIAL REGIONAL mediante resolución fundada (Art. 21 D.208)' },
+        { id: 14, text: 'CHALECO ANTICORTE PARA EL GG.SS. (Art. 93, Decreto 209): Certificación NIJ 0115.00 y seguro adicional 30 UF' },
+        { id: 15, text: 'COMUNICACIÓN A ORGANISMOS: Carabineros, Bomberos, Municipalidad, Servicio Salud (Art. 21 inciso final D.208)' }
+    ]
+}
 };
 
 let currentSection = 'inicio'; // Variable para controlar la sección actual
 let selectedDirectivaType = null; // Para la sección de Directiva de Funcionamiento
 let sectionHistory = []; // Historial de navegación
+let restaurandoEstado = false; // Evita autoguardado mientras se restaura un estado
 
 // Función para mostrar la sección seleccionada y ocultar las demás
 function mostrarSeccion(sectionId) {
@@ -158,10 +150,21 @@ function mostrarSeccion(sectionId) {
             if (btnVolver) btnVolver.style.display = 'block';
         }
         
-        // Cargar requisitos para todas las secciones excepto inicio
-        if (sectionId !== 'inicio') {
+        // Cargar requisitos para todas las secciones excepto inicio e historial
+        if (sectionId !== 'inicio' && sectionId !== 'historial') {
             if (sectionId === 'directiva-funcionamiento') {
-                // Para directiva solo cargar si ya hay un tipo seleccionado
+                // Si no hay tipo seleccionado, intentar restaurar del borrador guardado
+                if (!selectedDirectivaType) {
+                    const tipoGuardado = STORAGE.ultimoTipoDirectivaGuardado();
+                    if (tipoGuardado) {
+                        selectedDirectivaType = tipoGuardado;
+                        const opt = document.querySelector(`.directiva-option[data-type="${tipoGuardado}"]`);
+                        if (opt) {
+                            document.querySelectorAll('.directiva-option').forEach(o => o.classList.remove('active'));
+                            opt.classList.add('active');
+                        }
+                    }
+                }
                 if (selectedDirectivaType) {
                     console.log(`Cargando directiva funcionamiento tipo: ${selectedDirectivaType}`);
                     cargarRequisitos(sectionId, selectedDirectivaType);
@@ -173,6 +176,12 @@ function mostrarSeccion(sectionId) {
                 console.log(`Cargando requisitos para: ${sectionId}`);
                 cargarRequisitos(sectionId);
             }
+        }
+
+        // Renderizar historial cuando entramos a esa sección
+        if (sectionId === 'historial') {
+            renderizarHistorial();
+            renderizarBorradores();
         }
     } else {
         console.error(`No se encontró la sección: ${sectionId}-section`);
@@ -251,8 +260,16 @@ function cargarRequisitos(sectionId, directivaType = null) {
         `;
         requisitosContainer.appendChild(requisitoItem);
     });
-    
+
     console.log(`Requisitos cargados exitosamente para: ${sectionId}`);
+
+    // Restaurar borrador guardado (si existe) para esta sección/tipo
+    const borrador = STORAGE.cargarBorrador(sectionId, directivaType);
+    if (borrador) {
+        restaurandoEstado = true;
+        STORAGE.aplicarEstado(sectionId, borrador);
+        restaurandoEstado = false;
+    }
 }
 
 // Función para marcar el estado de un requisito
@@ -271,6 +288,8 @@ function marcarEstado(button, estado) {
 
     // Añadir clase de estado al requisito-item
     requisitoItem.classList.add(estado);
+
+    if (!restaurandoEstado) autoguardar();
 }
 
 // Función para seleccionar el tipo de directiva
@@ -344,43 +363,42 @@ async function generarReporte(sectionId) {
     // Mapear correctamente los IDs según la sección
     let nombreEmpresaId, rutEmpresaId, nombreEstablecimientoId, direccionId, quienpresentaId, funcionarioGradoId;
     
-    if (sectionId === 'plan-seguridad') {
-        nombreEmpresaId = 'nombre-empresa-plan';
-        rutEmpresaId = 'rut-empresa-plan';
-        nombreEstablecimientoId = 'nombre-establecimiento-plan';
-        direccionId = 'direccion-plan';
-        quienpresentaId = 'quien-presenta';
-        funcionarioGradoId = 'funcionario-grado-plan';
-    } else if (sectionId === 'estudios-seguridad') {
-        nombreEmpresaId = 'nombre-empresa-estudios';
-        rutEmpresaId = 'rut-empresa-estudios';
-        nombreEstablecimientoId = 'nombre-establecimiento-estudios';
-        direccionId = 'direccion-estudios';
-        quienpresentaId = 'quien-presenta';
-        funcionarioGradoId = 'funcionario-grado-estudios';
-    // ... (dentro de la función generarReporte)
-    } else if (sectionId === 'servicentros') {
-        nombreEmpresaId = 'nombre-empresa-servicentros';
-        rutEmpresaId = 'rut-empresa-servicentros';
-        nombreEstablecimientoId = 'nombre-establecimiento-servicentros';
-        direccionId = 'direccion-servicentros';
-        quienpresentaId = 'quien-presenta';
-        funcionarioGradoId = 'funcionario-grado-servicentros';
-    } else if (sectionId === 'sobre-500uf') {
-        nombreEmpresaId = 'nombre-empresa-500uf';
-        rutEmpresaId = 'rut-empresa-500uf';
-        nombreEstablecimientoId = 'nombre-establecimiento-500uf';
-        direccionId = 'direccion-500uf';
-        quienpresentaId = 'quien-presenta';
-        funcionarioGradoId = 'funcionario-grado-500uf';
-    } else if (sectionId === 'directiva-funcionamiento') {
-        nombreEmpresaId = 'nombre-empresa-directiva';
-        rutEmpresaId = 'rut-empresa-directiva';
-        nombreEstablecimientoId = 'nombre-establecimiento-directiva';
-        direccionId = 'direccion-directiva';
-        quienpresentaId = 'quien-presenta';
-        funcionarioGradoId = 'funcionario-grado-directiva';
-    }
+   if (sectionId === 'plan-seguridad') {
+    nombreEmpresaId = 'nombre-empresa-plan';
+    rutEmpresaId = 'rut-empresa-plan';
+    nombreEstablecimientoId = 'nombre-establecimiento-plan';
+    direccionId = 'direccion-plan';
+    quienpresentaId = 'quien-presenta-plan';  // ← AGREGAR
+    funcionarioGradoId = 'funcionario-grado-plan';
+} else if (sectionId === 'estudios-seguridad') {
+    nombreEmpresaId = 'nombre-empresa-estudios';
+    rutEmpresaId = 'rut-empresa-estudios';
+    nombreEstablecimientoId = 'nombre-establecimiento-estudios';
+    direccionId = 'direccion-estudios';
+    quienpresentaId = 'quien-presenta-estudios';  // ← AGREGAR
+    funcionarioGradoId = 'funcionario-grado-estudios';
+} else if (sectionId === 'servicentros') {
+    nombreEmpresaId = 'nombre-empresa-servicentros';
+    rutEmpresaId = 'rut-empresa-servicentros';
+    nombreEstablecimientoId = 'nombre-establecimiento-servicentros';
+    direccionId = 'direccion-servicentros';
+    quienpresentaId = 'quien-presenta-servicentros';  // ← AGREGAR
+    funcionarioGradoId = 'funcionario-grado-servicentros';
+} else if (sectionId === 'sobre-500uf') {
+    nombreEmpresaId = 'nombre-empresa-500uf';
+    rutEmpresaId = 'rut-empresa-500uf';
+    nombreEstablecimientoId = 'nombre-establecimiento-500uf';
+    direccionId = 'direccion-500uf';
+    quienpresentaId = 'quien-presenta-500uf';  // ← AGREGAR
+    funcionarioGradoId = 'funcionario-grado-500uf';
+} else if (sectionId === 'directiva-funcionamiento') {
+    nombreEmpresaId = 'nombre-empresa-directiva';
+    rutEmpresaId = 'rut-empresa-directiva';
+    nombreEstablecimientoId = 'nombre-establecimiento-directiva';
+    direccionId = 'direccion-directiva';
+    quienpresentaId = 'quien-presenta-directiva';  // ← AGREGAR
+    funcionarioGradoId = 'funcionario-grado-directiva';
+}
 
     const generalInfo = {
         nombreEmpresa: getInputValue(nombreEmpresaId),
@@ -403,16 +421,16 @@ async function generarReporte(sectionId) {
     
     if (sectionId === 'plan-seguridad') {
         sectionTitle = 'PLAN DE SEGURIDAD';
-        sectionSubtitle = 'Vigencia según estudio';
+        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
     } else if (sectionId === 'estudios-seguridad') {
         sectionTitle = 'ESTUDIOS DE SEGURIDAD';
-        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia según estudio';
+        sectionSubtitle = 'Casa Matriz y Sucursales - Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
     } else if (sectionId === 'servicentros') {
         sectionTitle = 'MEDIDAS DE SEG. SERVICENTROS';
-        sectionSubtitle = 'Vigencia 3 años - Ley 19.303';
+        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
     } else if (sectionId === 'sobre-500uf') {
         sectionTitle = 'MEDIDAS SOBRE 500 UF';
-        sectionSubtitle = 'Vigencia 3 años - Supermercados, joyerías, bancos y establecimientos que manejan valores superiores a 500 UF';
+        sectionSubtitle = 'Vigencia (4 años sin sistema de vigilancia o 2 años con sistema de vigilancia privada.)\nArt. 17 Ley 21.659, Decreto 209, Artículos 15 y 17';
     } else if (sectionId === 'directiva-funcionamiento') {
         sectionTitle = 'DIRECTIVA DE FUNCIONAMIENTO';
         
@@ -503,9 +521,9 @@ async function generarReporte(sectionId) {
     addBoldedLabelText('NOMBRE DEL ESTABLECIMIENTO:  ', generalInfo.nombreEstablecimiento, 20, yOffset);
     yOffset += 5;
     addBoldedLabelText('DIRECCIÓN DEL ESTABLECIMIENTO:  ', generalInfo.direccion, 20, yOffset);
-    yOffset += 8;
-    addBoldedLabelText('DOCUMENTACIÓN PRESENTADA POR:  ', generalInfo.quienpresenta, 20, yOffset);
     yOffset += 5;
+    addBoldedLabelText('QUIEN PRESENTA LA DOCUMENTACIÓN:  ', generalInfo.quienpresenta, 20, yOffset);
+    yOffset += 8;
 
     doc.setFont(undefined, 'bold');
     doc.setFontSize(10);
@@ -669,6 +687,31 @@ async function generarReporte(sectionId) {
     try {
         const fecha = new Date().toISOString().split('T')[0];
         const fileName = `${sectionTitle.replace(/\s+/g, '_')}_${fecha}.pdf`;
+
+        // Embebir los datos del formulario en los metadatos del PDF.
+        // Al reimportar este PDF, extraemos "subject" y restauramos todo.
+        let payload;
+        try {
+            const snapshotEmbed = STORAGE.capturarEstado(sectionId);
+            const payloadObj = {
+                os10Version: 1,
+                sectionId,
+                titulo: sectionTitle,
+                tipoDirectiva: tipoDirectiva || null,
+                fecha: new Date().toISOString(),
+                snapshot: snapshotEmbed
+            };
+            payload = 'OS10:' + btoa(unescape(encodeURIComponent(JSON.stringify(payloadObj))));
+            doc.setProperties({
+                title: `${sectionTitle} - ${generalInfo.nombreEmpresa || ''}`,
+                subject: payload,
+                author: 'OS10 Coquimbo - Carabineros de Chile',
+                keywords: 'OS10-COQUIMBO;SEGURIDAD-PRIVADA;VERSION-1',
+                creator: 'Sistema OS10 Coquimbo'
+            });
+        } catch (e) {
+            console.warn('No se pudieron embebir los datos en el PDF:', e);
+        }
         
         // Usar output para obtener el blob y luego guardarlo
         const pdfBlob = doc.output('blob');
@@ -683,7 +726,30 @@ async function generarReporte(sectionId) {
         
         console.log(`PDF generado exitosamente: ${fileName}`);
         console.log(`Total de páginas: ${totalPages}`);
-        
+
+        // Guardar snapshot del reporte en el historial local
+        try {
+            const snapshot = STORAGE.capturarEstado(sectionId);
+            const cumpleCount = snapshot.requisitos.filter(r => r.estado === 'cumple').length;
+            const noCumpleCount = snapshot.requisitos.filter(r => r.estado === 'no-cumple').length;
+            const pendienteCount = snapshot.requisitos.filter(r => !r.estado).length;
+            STORAGE.guardarEnHistorial({
+                id: STORAGE.generarId(),
+                fecha: new Date().toISOString(),
+                sectionId,
+                titulo: sectionTitle,
+                tipoDirectiva: tipoDirectiva || null,
+                empresa: snapshot.campos.nombreEmpresa,
+                establecimiento: snapshot.campos.nombreEstablecimiento,
+                cumpleCount,
+                noCumpleCount,
+                pendienteCount,
+                snapshot
+            });
+        } catch (e) {
+            console.error('No se pudo guardar en el historial:', e);
+        }
+
     } catch (error) {
         console.error('Error al guardar el PDF:', error);
         alert('Error al generar el PDF. Por favor, intente de nuevo.');
@@ -711,12 +777,461 @@ window.addEventListener('afterprint', function() {
     }
 });
 
+// ============================================
+// SISTEMA DE ALMACENAMIENTO LOCAL
+// Autoguardado de borradores + historial de PDFs + export/import JSON
+// ============================================
+
+const STORAGE = {
+    historialKey: 'os10-historial',
+    ultimoTipoDirectivaKey: 'os10-ultimo-tipo-directiva',
+
+    // Mapeo de sección → sufijo de IDs en el DOM
+    _suffix: {
+        'plan-seguridad': 'plan',
+        'estudios-seguridad': 'estudios',
+        'servicentros': 'servicentros',
+        'sobre-500uf': '500uf',
+        'directiva-funcionamiento': 'directiva'
+    },
+
+    borradorKey(sectionId, directivaType) {
+        if (sectionId === 'directiva-funcionamiento' && directivaType) {
+            return `os10-borrador-${sectionId}-${directivaType}`;
+        }
+        return `os10-borrador-${sectionId}`;
+    },
+
+    getSectionFieldIds(sectionId) {
+        const s = this._suffix[sectionId];
+        if (!s) return null;
+        return {
+            nombreEmpresa: `nombre-empresa-${s}`,
+            rutEmpresa: `rut-empresa-${s}`,
+            nombreEstablecimiento: `nombre-establecimiento-${s}`,
+            direccion: `direccion-${s}`,
+            quienpresenta: `quien-presenta-${s}`,
+            funcionarioGrado: `funcionario-grado-${s}`
+        };
+    },
+
+    capturarEstado(sectionId) {
+        const ids = this.getSectionFieldIds(sectionId);
+        if (!ids) return null;
+        const v = id => (document.getElementById(id)?.value || '').trim();
+        const state = {
+            fecha: new Date().toISOString(),
+            sectionId,
+            directivaType: sectionId === 'directiva-funcionamiento' ? selectedDirectivaType : null,
+            campos: {
+                nombreEmpresa: v(ids.nombreEmpresa),
+                rutEmpresa: v(ids.rutEmpresa),
+                nombreEstablecimiento: v(ids.nombreEstablecimiento),
+                direccion: v(ids.direccion),
+                quienpresenta: v(ids.quienpresenta),
+                funcionarioGrado: v(ids.funcionarioGrado)
+            },
+            requisitos: []
+        };
+
+        const containerSel = sectionId === 'sobre-500uf'
+            ? '#requisitos-sobre-500uf .requisito-item'
+            : `#requisitos-${sectionId} .requisito-item`;
+        document.querySelectorAll(containerSel).forEach(item => {
+            state.requisitos.push({
+                id: item.getAttribute('data-numero'),
+                estado: item.classList.contains('cumple') ? 'cumple'
+                    : item.classList.contains('no-cumple') ? 'no-cumple' : null,
+                observacion: item.querySelector('.observacion-input')?.value || ''
+            });
+        });
+        return state;
+    },
+
+    aplicarEstado(sectionId, state) {
+        if (!state) return;
+        const ids = this.getSectionFieldIds(sectionId);
+        if (!ids) return;
+        const set = (id, val) => { const el = document.getElementById(id); if (el && val != null) el.value = val; };
+        const c = state.campos || {};
+        set(ids.nombreEmpresa, c.nombreEmpresa);
+        set(ids.rutEmpresa, c.rutEmpresa);
+        set(ids.nombreEstablecimiento, c.nombreEstablecimiento);
+        set(ids.direccion, c.direccion);
+        set(ids.quienpresenta, c.quienpresenta);
+        set(ids.funcionarioGrado, c.funcionarioGrado);
+
+        const containerSel = sectionId === 'sobre-500uf'
+            ? '#requisitos-sobre-500uf .requisito-item'
+            : `#requisitos-${sectionId} .requisito-item`;
+        (state.requisitos || []).forEach(rq => {
+            const item = document.querySelector(`${containerSel}[data-numero="${rq.id}"]`);
+            if (!item) return;
+            if (rq.estado === 'cumple') {
+                const btn = item.querySelector('.btn-cumple');
+                if (btn) marcarEstado(btn, 'cumple');
+            } else if (rq.estado === 'no-cumple') {
+                const btn = item.querySelector('.btn-no-cumple');
+                if (btn) marcarEstado(btn, 'no-cumple');
+            }
+            const obs = item.querySelector('.observacion-input');
+            if (obs && rq.observacion != null) obs.value = rq.observacion;
+        });
+    },
+
+    guardarBorrador(sectionId) {
+        if (!sectionId || sectionId === 'inicio' || sectionId === 'historial') return;
+        const directivaType = sectionId === 'directiva-funcionamiento' ? selectedDirectivaType : null;
+        if (sectionId === 'directiva-funcionamiento' && !directivaType) return;
+        const state = this.capturarEstado(sectionId);
+        if (!state) return;
+        try {
+            localStorage.setItem(this.borradorKey(sectionId, directivaType), JSON.stringify(state));
+            if (directivaType) localStorage.setItem(this.ultimoTipoDirectivaKey, directivaType);
+            mostrarIndicadorAutoguardado();
+        } catch (e) {
+            console.error('Error guardando borrador:', e);
+        }
+    },
+
+    cargarBorrador(sectionId, directivaType) {
+        try {
+            const raw = localStorage.getItem(this.borradorKey(sectionId, directivaType));
+            if (!raw) return null;
+            return JSON.parse(raw);
+        } catch { return null; }
+    },
+
+    borrarBorrador(sectionId, directivaType) {
+        localStorage.removeItem(this.borradorKey(sectionId, directivaType));
+    },
+
+    listarBorradores() {
+        const drafts = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (!key || !key.startsWith('os10-borrador-')) continue;
+            try {
+                const state = JSON.parse(localStorage.getItem(key));
+                drafts.push({ key, state });
+            } catch {}
+        }
+        drafts.sort((a, b) => (b.state.fecha || '').localeCompare(a.state.fecha || ''));
+        return drafts;
+    },
+
+    ultimoTipoDirectivaGuardado() {
+        return localStorage.getItem(this.ultimoTipoDirectivaKey);
+    },
+
+    obtenerHistorial() {
+        try {
+            return JSON.parse(localStorage.getItem(this.historialKey) || '[]');
+        } catch { return []; }
+    },
+
+    guardarEnHistorial(entry) {
+        const historial = this.obtenerHistorial();
+        historial.unshift(entry);
+        if (historial.length > 200) historial.length = 200;
+        try {
+            localStorage.setItem(this.historialKey, JSON.stringify(historial));
+        } catch (e) {
+            alert('No hay espacio suficiente en el navegador para guardar más reportes. Elimine reportes antiguos desde el Historial.');
+        }
+    },
+
+    eliminarDeHistorial(id) {
+        const historial = this.obtenerHistorial().filter(h => h.id !== id);
+        localStorage.setItem(this.historialKey, JSON.stringify(historial));
+    },
+
+    obtenerDelHistorial(id) {
+        return this.obtenerHistorial().find(h => h.id === id) || null;
+    },
+
+    vaciarHistorial() {
+        localStorage.removeItem(this.historialKey);
+    },
+
+    generarId() {
+        return 'r-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+    }
+};
+
+// ---------- Autoguardado ----------
+let autoSaveTimer = null;
+function autoguardar() {
+    if (restaurandoEstado) return;
+    if (!currentSection || currentSection === 'inicio' || currentSection === 'historial') return;
+    if (autoSaveTimer) clearTimeout(autoSaveTimer);
+    autoSaveTimer = setTimeout(() => STORAGE.guardarBorrador(currentSection), 400);
+}
+
+function mostrarIndicadorAutoguardado() {
+    const el = document.getElementById('autosave-indicator');
+    if (!el) return;
+    el.textContent = '✔ Guardado ' + new Date().toLocaleTimeString('es-CL');
+    el.classList.add('visible');
+    clearTimeout(mostrarIndicadorAutoguardado._t);
+    mostrarIndicadorAutoguardado._t = setTimeout(() => {
+        el.classList.remove('visible');
+    }, 1800);
+}
+
+// ---------- Utilidades UI ----------
+function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str).replace(/[&<>"']/g, s => (
+        { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[s]
+    ));
+}
+
+function nombreLegibleSeccion(sectionId, tipoDirectiva) {
+    const map = {
+        'plan-seguridad': 'Plan de Seguridad',
+        'estudios-seguridad': 'Estudios de Seguridad',
+        'servicentros': 'Servicentros',
+        'sobre-500uf': 'Medidas sobre 500 UF',
+        'directiva-funcionamiento': 'Directiva de Funcionamiento'
+    };
+    const base = map[sectionId] || sectionId;
+    if (sectionId === 'directiva-funcionamiento' && tipoDirectiva) {
+        const t = { 'instalacion': 'Instalación', 'evento-deportivo': 'Evento Deportivo', 'evento-masivo': 'Evento Masivo' };
+        return `${base} — ${t[tipoDirectiva] || tipoDirectiva}`;
+    }
+    return base;
+}
+
+// ---------- Renderizado del historial ----------
+function renderizarHistorial() {
+    const container = document.getElementById('historial-lista');
+    if (!container) return;
+    const historial = STORAGE.obtenerHistorial();
+
+    if (historial.length === 0) {
+        container.innerHTML = '<div class="historial-vacio">Aún no ha generado ningún PDF. Cada vez que genere un reporte, se guardará aquí automáticamente.</div>';
+        return;
+    }
+
+    container.innerHTML = historial.map(h => {
+        const fecha = new Date(h.fecha).toLocaleString('es-CL');
+        const nombreSec = nombreLegibleSeccion(h.sectionId, h.snapshot?.directivaType);
+        return `
+            <div class="historial-item reporte">
+                <div class="historial-info">
+                    <h4>${escapeHTML(nombreSec)}</h4>
+                    <p><strong>Empresa:</strong> ${escapeHTML(h.empresa || '(sin especificar)')}</p>
+                    <p><strong>Establecimiento:</strong> ${escapeHTML(h.establecimiento || '(sin especificar)')}</p>
+                    <p><strong>Generado:</strong> ${escapeHTML(fecha)}</p>
+                    <p>
+                        <span class="historial-metrica cumple">✔ ${h.cumpleCount} cumple</span>
+                        <span class="historial-metrica nocumple">✖ ${h.noCumpleCount} no cumple</span>
+                        <span class="historial-metrica pendiente">• ${h.pendienteCount} pendiente</span>
+                    </p>
+                </div>
+                <div class="historial-acciones">
+                    <button class="btn btn-success" onclick="descargarHistorialPDF('${h.id}')">📄 Descargar PDF de nuevo</button>
+                    <button class="btn btn-info" onclick="cargarHistorialEnFormulario('${h.id}')">📝 Abrir en formulario</button>
+                    <button class="btn btn-danger" onclick="eliminarHistorial('${h.id}')">🗑️ Eliminar</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderizarBorradores() {
+    const container = document.getElementById('borradores-lista');
+    if (!container) return;
+    const drafts = STORAGE.listarBorradores();
+
+    if (drafts.length === 0) {
+        container.innerHTML = '<div class="historial-vacio">No hay borradores en curso. Al comenzar a llenar un formulario se guardará automáticamente aquí.</div>';
+        return;
+    }
+
+    container.innerHTML = drafts.map(d => {
+        const state = d.state;
+        const fecha = state.fecha ? new Date(state.fecha).toLocaleString('es-CL') : '';
+        const nombreSec = nombreLegibleSeccion(state.sectionId, state.directivaType);
+        const empresa = state.campos?.nombreEmpresa || '(sin especificar)';
+        const establecimiento = state.campos?.nombreEstablecimiento || '(sin especificar)';
+        const cumple = (state.requisitos || []).filter(r => r.estado === 'cumple').length;
+        const nocumple = (state.requisitos || []).filter(r => r.estado === 'no-cumple').length;
+        const pend = (state.requisitos || []).filter(r => !r.estado).length;
+        return `
+            <div class="historial-item borrador">
+                <div class="historial-info">
+                    <h4>${escapeHTML(nombreSec)}</h4>
+                    <p><strong>Empresa:</strong> ${escapeHTML(empresa)}</p>
+                    <p><strong>Establecimiento:</strong> ${escapeHTML(establecimiento)}</p>
+                    <p><strong>Última edición:</strong> ${escapeHTML(fecha)}</p>
+                    <p>
+                        <span class="historial-metrica cumple">✔ ${cumple}</span>
+                        <span class="historial-metrica nocumple">✖ ${nocumple}</span>
+                        <span class="historial-metrica pendiente">• ${pend}</span>
+                    </p>
+                </div>
+                <div class="historial-acciones">
+                    <button class="btn btn-success" onclick="continuarBorrador('${escapeHTML(state.sectionId)}', '${escapeHTML(state.directivaType || '')}')">▶ Continuar edición</button>
+                    <button class="btn btn-danger" onclick="eliminarBorrador('${escapeHTML(d.key)}')">🗑️ Descartar borrador</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// ---------- Acciones del historial ----------
+function descargarHistorialPDF(id) {
+    const entry = STORAGE.obtenerDelHistorial(id);
+    if (!entry) return;
+    _abrirEntradaEnFormulario(entry, () => generarReporte(entry.sectionId));
+}
+
+function cargarHistorialEnFormulario(id) {
+    const entry = STORAGE.obtenerDelHistorial(id);
+    if (!entry) return;
+    _abrirEntradaEnFormulario(entry);
+}
+
+function _abrirEntradaEnFormulario(entry, luego) {
+    const { sectionId, snapshot } = entry;
+    if (sectionId === 'directiva-funcionamiento' && snapshot?.directivaType) {
+        selectedDirectivaType = snapshot.directivaType;
+        localStorage.setItem(STORAGE.ultimoTipoDirectivaKey, snapshot.directivaType);
+    }
+    mostrarSeccion(sectionId);
+    // Aplicar snapshot tras el render (mostrarSeccion → cargarRequisitos ya restauró borrador; sobrescribimos)
+    setTimeout(() => {
+        restaurandoEstado = true;
+        STORAGE.aplicarEstado(sectionId, snapshot);
+        restaurandoEstado = false;
+        STORAGE.guardarBorrador(sectionId); // sincronizar borrador con lo cargado
+        if (typeof luego === 'function') setTimeout(luego, 100);
+    }, 60);
+}
+
+function eliminarHistorial(id) {
+    if (!confirm('¿Eliminar este reporte del historial? Esta acción no se puede deshacer.')) return;
+    STORAGE.eliminarDeHistorial(id);
+    renderizarHistorial();
+}
+
+function limpiarHistorial() {
+    if (!confirm('¿Vaciar TODO el historial de reportes generados? Los borradores en curso no se tocarán.')) return;
+    STORAGE.vaciarHistorial();
+    renderizarHistorial();
+}
+
+function continuarBorrador(sectionId, directivaType) {
+    if (sectionId === 'directiva-funcionamiento' && directivaType) {
+        selectedDirectivaType = directivaType;
+        localStorage.setItem(STORAGE.ultimoTipoDirectivaKey, directivaType);
+    } else if (sectionId !== 'directiva-funcionamiento') {
+        selectedDirectivaType = null;
+    }
+    mostrarSeccion(sectionId);
+}
+
+function eliminarBorrador(key) {
+    if (!confirm('¿Descartar este borrador? Se perderán los datos guardados.')) return;
+    localStorage.removeItem(key);
+    renderizarBorradores();
+}
+
+// ---------- Importar datos desde un PDF descargado ----------
+// Los PDFs generados por este sistema embeben los datos del formulario en los
+// metadatos (Subject). Aquí los extraemos con pdf-lib y restauramos el reporte.
+async function importarDesdeArchivoPDF(file) {
+    if (!file) return;
+    if (typeof PDFLib === 'undefined') {
+        alert('El lector de PDF no está disponible. Verifique su conexión a internet y recargue la página.');
+        return;
+    }
+    if (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf') {
+        alert('Debe seleccionar un archivo PDF descargado desde este sistema.');
+        return;
+    }
+    try {
+        const bytes = await file.arrayBuffer();
+        const pdfDoc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true });
+        const subject = pdfDoc.getSubject() || '';
+        if (!subject.startsWith('OS10:')) {
+            alert('Este PDF no contiene datos importables. Debe ser un PDF descargado desde este mismo sistema (versión reciente).');
+            return;
+        }
+        const b64 = subject.slice(5);
+        let payload;
+        try {
+            payload = JSON.parse(decodeURIComponent(escape(atob(b64))));
+        } catch (e) {
+            alert('No se pudieron leer los datos del PDF (formato inválido o dañado).');
+            return;
+        }
+        if (!payload || !payload.snapshot || !payload.sectionId) {
+            alert('El PDF no contiene un reporte válido.');
+            return;
+        }
+
+        // Rearmar entrada como si viniera del historial local
+        const snapshot = payload.snapshot;
+        const cumpleCount = (snapshot.requisitos || []).filter(r => r.estado === 'cumple').length;
+        const noCumpleCount = (snapshot.requisitos || []).filter(r => r.estado === 'no-cumple').length;
+        const pendienteCount = (snapshot.requisitos || []).filter(r => !r.estado).length;
+        const entry = {
+            id: STORAGE.generarId(),
+            fecha: payload.fecha || new Date().toISOString(),
+            sectionId: payload.sectionId,
+            titulo: payload.titulo || nombreLegibleSeccion(payload.sectionId, snapshot.directivaType),
+            tipoDirectiva: payload.tipoDirectiva || null,
+            empresa: snapshot.campos?.nombreEmpresa || '',
+            establecimiento: snapshot.campos?.nombreEstablecimiento || '',
+            cumpleCount, noCumpleCount, pendienteCount,
+            snapshot
+        };
+
+        // Evitar duplicado si ya existe uno idéntico (misma sección, empresa, fecha)
+        const existente = STORAGE.obtenerHistorial();
+        const duplicado = existente.find(h =>
+            h.sectionId === entry.sectionId &&
+            h.empresa === entry.empresa &&
+            h.establecimiento === entry.establecimiento &&
+            h.fecha === entry.fecha
+        );
+        if (duplicado) {
+            const opcion = confirm(
+                'Este reporte ya está en el historial (misma empresa, establecimiento y fecha).\n\n' +
+                'Aceptar = Abrir el reporte existente en el formulario.\n' +
+                'Cancelar = Cancelar la importación.'
+            );
+            if (opcion) cargarHistorialEnFormulario(duplicado.id);
+            return;
+        }
+
+        STORAGE.guardarEnHistorial(entry);
+        renderizarHistorial();
+        renderizarBorradores();
+        const abrir = confirm(
+            `Reporte importado correctamente:\n\n${entry.titulo}\nEmpresa: ${entry.empresa || '(sin especificar)'}\n\n` +
+            '¿Desea abrirlo ahora en el formulario para editarlo o volver a generar el PDF?'
+        );
+        if (abrir) cargarHistorialEnFormulario(entry.id);
+    } catch (err) {
+        console.error(err);
+        alert('No se pudo leer el PDF. Asegúrese de que el archivo no esté dañado.');
+    }
+}
+
+// ---------- Autoguardado por eventos delegados ----------
+document.addEventListener('input', () => autoguardar());
+document.addEventListener('change', () => autoguardar());
+
 // Cargar los requisitos iniciales cuando la página se carga
 document.addEventListener('DOMContentLoaded', () => {
     // Establecer clase inicial del body
     document.body.className = 'inicio';
     mostrarSeccion('inicio');
-    
+
     const logoImg = document.querySelector('.logo-imagen');
     if (logoImg) {
         logoImg.onerror = function() {
@@ -728,12 +1243,22 @@ document.addEventListener('DOMContentLoaded', () => {
             fallback.style.color = '#2d5016';
             this.parentNode.appendChild(fallback);
         };
-        
+
         logoImg.onload = function() {
             console.log('Logo cargado exitosamente');
         };
     }
-    
+
+    // Hook del input file para importar un PDF descargado
+    const importInput = document.getElementById('importar-pdf-input');
+    if (importInput) {
+        importInput.addEventListener('change', (e) => {
+            const file = e.target.files && e.target.files[0];
+            importarDesdeArchivoPDF(file);
+            e.target.value = '';
+        });
+    }
+
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && currentSection !== 'inicio') {
             volverAtras();
